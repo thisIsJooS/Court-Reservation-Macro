@@ -1,3 +1,0 @@
-([('app',
-   '/Users/joos/Documents/2022/code/reservation-macro/dist/app',
-   'EXECUTABLE')],)
