@@ -1,11 +1,9 @@
 import sys
 import pathlib
-
 from PyQt6.QtWidgets import QMainWindow, QApplication
-from PyQt6.QtCore import *
+from PyQt6.QtCore import QDate, QEventLoop, QTimer
 from PyQt6 import uic
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 
 
