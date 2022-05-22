@@ -14,10 +14,10 @@ class Ui_Dialog(object):
         Dialog.setObjectName("Dialog")
         Dialog.resize(846, 569)
         self.groupBox_2 = QtWidgets.QGroupBox(Dialog)
-        self.groupBox_2.setGeometry(QtCore.QRect(10, 50, 221, 221))
+        self.groupBox_2.setGeometry(QtCore.QRect(10, 50, 221, 181))
         self.groupBox_2.setObjectName("groupBox_2")
         self.textBrowser = QtWidgets.QTextBrowser(self.groupBox_2)
-        self.textBrowser.setGeometry(QtCore.QRect(10, 110, 201, 111))
+        self.textBrowser.setGeometry(QtCore.QRect(10, 100, 201, 81))
         self.textBrowser.setObjectName("textBrowser")
         self.formLayoutWidget = QtWidgets.QWidget(self.groupBox_2)
         self.formLayoutWidget.setGeometry(QtCore.QRect(10, 30, 201, 71))
@@ -38,10 +38,10 @@ class Ui_Dialog(object):
         self.userPwInputBox.setObjectName("userPwInputBox")
         self.formLayout.setWidget(1, QtWidgets.QFormLayout.ItemRole.FieldRole, self.userPwInputBox)
         self.loginBtn = QtWidgets.QPushButton(Dialog)
-        self.loginBtn.setGeometry(QtCore.QRect(10, 510, 101, 31))
+        self.loginBtn.setGeometry(QtCore.QRect(10, 520, 101, 31))
         self.loginBtn.setObjectName("loginBtn")
         self.startBtn = QtWidgets.QPushButton(Dialog)
-        self.startBtn.setGeometry(QtCore.QRect(130, 510, 101, 31))
+        self.startBtn.setGeometry(QtCore.QRect(130, 520, 101, 31))
         self.startBtn.setObjectName("startBtn")
         self.plainTextEdit = QtWidgets.QPlainTextEdit(Dialog)
         self.plainTextEdit.setGeometry(QtCore.QRect(20, 10, 181, 31))
@@ -490,26 +490,26 @@ class Ui_Dialog(object):
         self.day1_8_16.setObjectName("day1_8_16")
         self.gridLayout_6.addWidget(self.day1_8_16, 19, 1, 1, 1)
         self.textEdit = QtWidgets.QTextEdit(Dialog)
-        self.textEdit.setGeometry(QtCore.QRect(240, 10, 191, 91))
+        self.textEdit.setGeometry(QtCore.QRect(240, 10, 171, 81))
         self.textEdit.setObjectName("textEdit")
         self.textBrowser_2 = QtWidgets.QTextBrowser(Dialog)
-        self.textBrowser_2.setGeometry(QtCore.QRect(540, 60, 231, 41))
+        self.textBrowser_2.setGeometry(QtCore.QRect(420, 10, 161, 81))
         self.textBrowser_2.setObjectName("textBrowser_2")
         self.textBrowser_3 = QtWidgets.QTextBrowser(Dialog)
-        self.textBrowser_3.setGeometry(QtCore.QRect(20, 370, 201, 131))
+        self.textBrowser_3.setGeometry(QtCore.QRect(20, 330, 201, 181))
         self.textBrowser_3.setObjectName("textBrowser_3")
         self.testModeBtn = QtWidgets.QCheckBox(Dialog)
-        self.testModeBtn.setGeometry(QtCore.QRect(540, 20, 87, 20))
+        self.testModeBtn.setGeometry(QtCore.QRect(610, 10, 87, 20))
         self.testModeBtn.setObjectName("testModeBtn")
         self.textBrowser_4 = QtWidgets.QTextBrowser(Dialog)
-        self.textBrowser_4.setGeometry(QtCore.QRect(630, 10, 191, 41))
+        self.textBrowser_4.setGeometry(QtCore.QRect(610, 40, 191, 51))
         self.textBrowser_4.setObjectName("textBrowser_4")
-        self.textBrowser_5 = QtWidgets.QTextBrowser(Dialog)
-        self.textBrowser_5.setGeometry(QtCore.QRect(20, 270, 201, 41))
-        self.textBrowser_5.setObjectName("textBrowser_5")
         self.textBrowser_6 = QtWidgets.QTextBrowser(Dialog)
-        self.textBrowser_6.setGeometry(QtCore.QRect(20, 310, 201, 61))
+        self.textBrowser_6.setGeometry(QtCore.QRect(20, 270, 201, 61))
         self.textBrowser_6.setObjectName("textBrowser_6")
+        self.textBrowser_5 = QtWidgets.QTextBrowser(Dialog)
+        self.textBrowser_5.setGeometry(QtCore.QRect(20, 230, 201, 41))
+        self.textBrowser_5.setObjectName("textBrowser_5")
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
@@ -524,8 +524,7 @@ class Ui_Dialog(object):
 "</style></head><body style=\" font-family:\'.AppleSystemUIFont\'; font-size:13pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt;\">노원구서비스공단의 회원 정보를 입력해주세요.</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt;\">아이디와 비밀번호는 꼭!!</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt;\">정확히 입력해주세요!!</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt;\">https://reservation.nowonsc.kr/sports/tennis_list</span></p></body></html>"))
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt;\">정확히 입력해주세요!!</span></p></body></html>"))
         self.iDLabel.setText(_translate("Dialog", "ID"))
         self.passwordLabel.setText(_translate("Dialog", "Password"))
         self.loginBtn.setText(_translate("Dialog", "로그인"))
@@ -672,14 +671,14 @@ class Ui_Dialog(object):
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'.AppleSystemUIFont\'; font-size:13pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">마들 테니스장은 1인 1일 최대 4시간까지 예약 가능합니다. </p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">7, 8번 코트만 구현했습니다.</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">나머지 코트 : 고정대관 + 레슨</p></body></html>"))
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt;\">마들 테니스장은 1인 1일 최대 4시간까지 예약 가능합니다. </span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt;\">7, 8번 코트만 구현했습니다.</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt;\">나머지 코트 : 고정대관 + 레슨</span></p></body></html>"))
         self.textBrowser_2.setHtml(_translate("Dialog", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'.AppleSystemUIFont\'; font-size:13pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt;\">하루에 4시간 이상 선택할 경우 좌상에서 우하 순서대로 4개까지만 선택됩니다.</span></p></body></html>"))
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt;\">하루에 4시간 초과 선택할 경우 좌상에서 우하 순서대로 4시간까지만 선택됩니다.</span></p></body></html>"))
         self.textBrowser_3.setHtml(_translate("Dialog", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -696,15 +695,15 @@ class Ui_Dialog(object):
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'.AppleSystemUIFont\'; font-size:13pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:11pt;\">테스트모드에 체크하고 실행할 시 최종예약 직전까지만 가고 멈춥니다.</span></p></body></html>"))
-        self.textBrowser_5.setHtml(_translate("Dialog", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'.AppleSystemUIFont\'; font-size:13pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt;\">다음달 예약 오픈 시간 : </span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt;\">전월 19일 14:00</span></p></body></html>"))
         self.textBrowser_6.setHtml(_translate("Dialog", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'.AppleSystemUIFont\'; font-size:13pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt;\">사용 중 오류가 발생하면 바로 개발자(주) 에게 문의주세요.</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt;\">개발자에게도 큰 도움이 됩니다 :)</span></p></body></html>"))
+        self.textBrowser_5.setHtml(_translate("Dialog", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:\'.AppleSystemUIFont\'; font-size:13pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt;\">다음달 예약 오픈 시간 : </span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt;\">전월 19일 14:00</span></p></body></html>"))
