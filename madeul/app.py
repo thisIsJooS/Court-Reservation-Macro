@@ -1,16 +1,18 @@
 import sys
 import pathlib
-from PyQt6.QtWidgets import QMainWindow, QApplication
+from PyQt6.QtWidgets import QMainWindow, QApplication, QInputDialog, QMessageBox
 from PyQt6.QtCore import QDate, QEventLoop, QTimer
 from PyQt6 import uic
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-
+import requests
+from bs4 import BeautifulSoup
 
 class MyApp(QMainWindow, uic.loadUiType('madeul.ui')[0]):
     
     def __init__(self):
         super().__init__()
+        self.validationKey = self.getValidationKey()
         self.driver = webdriver.Chrome(f'{pathlib.Path(__file__).parent.parent.resolve()}/chromedriver')
         self.driver.set_window_size(1200, 800)
         self.driver.get('https://reservation.nowonsc.kr/member/login')
@@ -310,10 +312,38 @@ class MyApp(QMainWindow, uic.loadUiType('madeul.ui')[0]):
         self.reservationDate4()
     
     
+    def validationCheck(self):
+        key, ok = QInputDialog.getText(self, '사용 허가 키 확인', 'Enter your key: ')
+        
+        if not ok: # 취소 버튼을 눌렀을 경우
+            return False
+        
+        else:   # 확인버튼을 눌렀을 경우 
+            if key == self.validationKey:    # 키가 일치할 경우
+                return True
+            else:   # 키가 일치 하지 않을 경우
+                errorMsg = QMessageBox(self)
+                errorMsg.setWindowTitle('키 불일치')
+                errorMsg.setText('키가 일치하지 않습니다. 개발자에게 문의해 주세요.')
+                errorMsg.setStandardButtons(QMessageBox.StandardButton.Yes)
+                errorMsg.exec()
+                return self.validationCheck()
+        
+    
+    def getValidationKey(self):
+        link = requests.get('https://thisisjoos.tistory.com/257')
+        link_html = BeautifulSoup(link.text, 'html.parser')
+
+        return link_html.select('#mArticle > div.area_view > div > p')[0].text
+
+    
     ''' 메인 함수 '''
     def initUI(self):
-        self.loginBtn.clicked.connect(self.login)
-        self.startBtn.clicked.connect(self.reservationStart)
+        if self.validationCheck():
+            self.loginBtn.clicked.connect(self.login)
+            self.startBtn.clicked.connect(self.reservationStart)
+        else:
+            sys.exit()
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
