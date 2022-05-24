@@ -1,3 +1,5 @@
+# version 1.2.0
+
 import sys
 import pathlib
 from PyQt6.QtWidgets import QMainWindow, QApplication, QInputDialog, QMessageBox
@@ -20,7 +22,6 @@ class MyApp(QMainWindow, uic.loadUiType('madeul.ui')[0]):
         self.date1InputBox.setDate(QDate.currentDate())
         self.date2InputBox.setDate(QDate.currentDate())
         self.date3InputBox.setDate(QDate.currentDate())
-        self.date4InputBox.setDate(QDate.currentDate())
         self.initUI()
         
     
@@ -86,7 +87,7 @@ class MyApp(QMainWindow, uic.loadUiType('madeul.ui')[0]):
     def reservationDate1(self):
         ''' Date 1 예약 '''
         selectedTimes = []    # 체크한 시간대들을 리스트에 삽입
-        for i in range(7, 9):
+        for i in range(7, 10):
             isFull = False
             for j in range(1, 17):
                 if self.__dict__[f'day1_{i}_{j}'].isChecked():
@@ -140,7 +141,7 @@ class MyApp(QMainWindow, uic.loadUiType('madeul.ui')[0]):
     def reservationDate2(self):
         ''' Date 2 예약 '''
         selectedTimes = []    # 체크한 시간대들을 리스트에 삽입
-        for i in range(7, 9):
+        for i in range(7, 10):
             isFull = False
             for j in range(1, 17):
                 if self.__dict__[f'day2_{i}_{j}'].isChecked():
@@ -195,7 +196,7 @@ class MyApp(QMainWindow, uic.loadUiType('madeul.ui')[0]):
     def reservationDate3(self):
         ''' Date 3 예약 '''
         selectedTimes = []    # 체크한 시간대들을 리스트에 삽입
-        for i in range(7, 9):
+        for i in range(7, 10):
             isFull = False
             for j in range(1, 17):
                 if self.__dict__[f'day3_{i}_{j}'].isChecked():
@@ -249,67 +250,10 @@ class MyApp(QMainWindow, uic.loadUiType('madeul.ui')[0]):
         ''' Date 3 예약 종료'''
     
     
-    def reservationDate4(self):
-        ''' Date 4 예약 '''
-        selectedTimes = []    # 체크한 시간대들을 리스트에 삽입
-        for i in range(7, 9):
-            isFull = False
-            for j in range(1, 17):
-                if self.__dict__[f'day4_{i}_{j}'].isChecked():
-                    selectedTimes.append((i, j))
-                
-                if len(selectedTimes) >= 4: 
-                    isFull = True
-                    break
-            
-            if isFull: break
-        
-        if not selectedTimes:   # 아무 시간대도 체크하지 않았으면 리턴
-            return
-        
-        self.date4 = self.date4InputBox.date()
-        date4_year = self.date4.year()
-        date4_month = self.date4.month()
-        date4_month = date4_month if date4_month >= 10 else '0' + str(date4_month)
-        date4_day = self.date4.day()
-        date4_day = date4_day if date4_day >= 10 else '0' + str(date4_day)
-        
-        self.driver.execute_script("window.open('');")
-        self.driver.switch_to.window(self.driver.window_handles[3])
-        self.driver.get('https://reservation.nowonsc.kr/sports/tennis_list')
-        self.click_xPath('//*[@id="container"]/div[2]/div[2]/div[1]/div[2]/div[2]/a[2]') # 대관신청 버튼
-        self.click_xPath('//*[@id="frm"]/div/div[1]/div/div/div/div[3]/span') # 다음달 넘어가기
-        
-        self.click_xPath(f'//*[@id="td-{date4_year}-{date4_month}-{date4_day}"]') # 날짜 선택
-        for td, tr in selectedTimes:     # 선택한 시간대들 체크
-            self.click_xPath(f'//*[@id="timeBody"]/tr[{tr}]/td[{td*2-1}]/div/label')
-        self.click_xPath('//*[@id="reserved_submit"]') # 예약 버튼
-        self.close_alert() # 대관신청 dialog 확인
-        
-        
-        try:  # 하나도 예약하지 못했을 경우 _value 값을 불러오지 못해 에러 발생
-            captchaValue = self.driver.execute_script('return _value')
-        except:
-            captchaValue = False
-        
-        
-        if captchaValue:  # 시간대 체크에 성공 했을 경우
-            self.sendKeys('//*[@id="value"]', self.driver.execute_script('return _value'))
-            self.click_xPath('//*[@id="capt_check"]')
-            self.close_alert()
-            self.click_xPath('//*[@id="container"]/div[2]/div[2]/div[3]/div/label')
-            
-            if not self.testModeBtn.isChecked():
-                self.click_xPath('//*[@id="frm"]/div/button[1]') # 최종 예약신청 버튼
-                self.close_alert()
-        ''' Date 4 예약 종료'''
-    
-    
     def reservationStart(self):
         self.reservationDate1()
         self.reservationDate2()
         self.reservationDate3()
-        self.reservationDate4()
     
     
     def validationCheck(self):

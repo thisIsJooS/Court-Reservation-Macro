@@ -109,20 +109,21 @@ p, li { white-space: pre-wrap; }
      <x>20</x>
      <y>10</y>
      <width>181</width>
-     <height>31</height>
+     <height>41</height>
     </rect>
    </property>
    <property name="plainText">
-    <string>마들 테니스장 예약 매크로</string>
+    <string>마들 테니스장 예약 매크로
+v1.2.0</string>
    </property>
   </widget>
   <widget class="QGroupBox" name="groupBox">
    <property name="geometry">
     <rect>
-     <x>250</x>
-     <y>110</y>
-     <width>581</width>
-     <height>441</height>
+     <x>230</x>
+     <y>100</y>
+     <width>611</width>
+     <height>451</height>
     </rect>
    </property>
    <property name="title">
@@ -131,10 +132,10 @@ p, li { white-space: pre-wrap; }
    <widget class="QGroupBox" name="GroupBox_day2">
     <property name="geometry">
      <rect>
-      <x>140</x>
+      <x>200</x>
       <y>20</y>
-      <width>141</width>
-      <height>421</height>
+      <width>201</width>
+      <height>431</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout_3">
@@ -369,9 +370,6 @@ p, li { white-space: pre-wrap; }
        </property>
       </widget>
      </item>
-     <item row="2" column="0" colspan="2">
-      <widget class="QDateEdit" name="date2InputBox"/>
-     </item>
      <item row="7" column="1">
       <widget class="QCheckBox" name="day2_8_4">
        <property name="text">
@@ -379,511 +377,499 @@ p, li { white-space: pre-wrap; }
        </property>
       </widget>
      </item>
+     <item row="19" column="2">
+      <widget class="QCheckBox" name="day2_9_16">
+       <property name="text">
+        <string>21~22</string>
+       </property>
+      </widget>
+     </item>
+     <item row="10" column="2">
+      <widget class="QCheckBox" name="day2_9_7">
+       <property name="text">
+        <string>12~13</string>
+       </property>
+      </widget>
+     </item>
+     <item row="12" column="2">
+      <widget class="QCheckBox" name="day2_9_9">
+       <property name="text">
+        <string>14~15</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="2">
+      <widget class="QCheckBox" name="day2_9_5">
+       <property name="text">
+        <string>10~11</string>
+       </property>
+      </widget>
+     </item>
+     <item row="11" column="2">
+      <widget class="QCheckBox" name="day2_9_8">
+       <property name="text">
+        <string>13~14</string>
+       </property>
+      </widget>
+     </item>
+     <item row="13" column="2">
+      <widget class="QCheckBox" name="day2_9_10">
+       <property name="text">
+        <string>15~16</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="2">
+      <widget class="QCheckBox" name="day2_9_4">
+       <property name="text">
+        <string>09~10</string>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="2">
+      <widget class="QCheckBox" name="day2_9_6">
+       <property name="text">
+        <string>11~12</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="2">
+      <widget class="QCheckBox" name="day2_9_1">
+       <property name="text">
+        <string>06~07</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="2">
+      <widget class="QCheckBox" name="day2_9_2">
+       <property name="text">
+        <string>07~08</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="2">
+      <widget class="QCheckBox" name="day2_9_3">
+       <property name="text">
+        <string>08~09</string>
+       </property>
+      </widget>
+     </item>
+     <item row="17" column="2">
+      <widget class="QCheckBox" name="day2_9_14">
+       <property name="text">
+        <string>19~20</string>
+       </property>
+      </widget>
+     </item>
+     <item row="18" column="2">
+      <widget class="QCheckBox" name="day2_9_15">
+       <property name="text">
+        <string>20~21</string>
+       </property>
+      </widget>
+     </item>
+     <item row="14" column="2">
+      <widget class="QCheckBox" name="day2_9_11">
+       <property name="text">
+        <string>16~17</string>
+       </property>
+      </widget>
+     </item>
+     <item row="16" column="2">
+      <widget class="QCheckBox" name="day2_9_13">
+       <property name="text">
+        <string>18~19</string>
+       </property>
+      </widget>
+     </item>
+     <item row="15" column="2">
+      <widget class="QCheckBox" name="day2_9_12">
+       <property name="text">
+        <string>17~18</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="2">
+      <widget class="QLabel" name="label_9">
+       <property name="text">
+        <string>9코트</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0" colspan="3">
+      <widget class="QDateEdit" name="date2InputBox"/>
+     </item>
     </layout>
    </widget>
    <widget class="QGroupBox" name="GroupBox_day3">
     <property name="geometry">
      <rect>
-      <x>280</x>
+      <x>400</x>
       <y>20</y>
-      <width>151</width>
-      <height>421</height>
+      <width>211</width>
+      <height>431</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout_4">
-     <item row="3" column="1">
-      <widget class="QLabel" name="label_7">
-       <property name="text">
-        <string>8코트</string>
-       </property>
-      </widget>
-     </item>
-     <item row="5" column="0">
-      <widget class="QCheckBox" name="day3_7_2">
-       <property name="text">
-        <string>07~08</string>
-       </property>
-      </widget>
-     </item>
-     <item row="4" column="1">
-      <widget class="QCheckBox" name="day3_8_1">
-       <property name="text">
-        <string>06~07</string>
-       </property>
-      </widget>
-     </item>
-     <item row="4" column="0">
-      <widget class="QCheckBox" name="day3_7_1">
-       <property name="text">
-        <string>06~07</string>
-       </property>
-      </widget>
-     </item>
-     <item row="6" column="0">
-      <widget class="QCheckBox" name="day3_7_3">
-       <property name="text">
-        <string>08~09</string>
-       </property>
-      </widget>
-     </item>
-     <item row="5" column="1">
-      <widget class="QCheckBox" name="day3_8_2">
-       <property name="text">
-        <string>07~08</string>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="0">
-      <widget class="QLabel" name="label_8">
-       <property name="text">
-        <string>7코트</string>
-       </property>
-      </widget>
-     </item>
-     <item row="6" column="1">
-      <widget class="QCheckBox" name="day3_8_3">
-       <property name="text">
-        <string>08~09</string>
-       </property>
-      </widget>
-     </item>
-     <item row="7" column="0">
-      <widget class="QCheckBox" name="day3_7_4">
-       <property name="text">
-        <string>09~10</string>
-       </property>
-      </widget>
-     </item>
-     <item row="7" column="1">
-      <widget class="QCheckBox" name="day3_8_4">
-       <property name="text">
-        <string>09~10</string>
-       </property>
-      </widget>
-     </item>
-     <item row="8" column="0">
-      <widget class="QCheckBox" name="day3_7_5">
-       <property name="text">
-        <string>10~11</string>
-       </property>
-      </widget>
-     </item>
-     <item row="8" column="1">
-      <widget class="QCheckBox" name="day3_8_5">
-       <property name="text">
-        <string>10~11</string>
-       </property>
-      </widget>
-     </item>
-     <item row="9" column="0">
-      <widget class="QCheckBox" name="day3_7_6">
-       <property name="text">
-        <string>11~12</string>
-       </property>
-      </widget>
-     </item>
-     <item row="9" column="1">
-      <widget class="QCheckBox" name="day3_8_6">
-       <property name="text">
-        <string>11~12</string>
-       </property>
-      </widget>
-     </item>
-     <item row="10" column="0">
-      <widget class="QCheckBox" name="day3_7_7">
-       <property name="text">
-        <string>12~13</string>
-       </property>
-      </widget>
-     </item>
-     <item row="10" column="1">
-      <widget class="QCheckBox" name="day3_8_7">
-       <property name="text">
-        <string>12~13</string>
-       </property>
-      </widget>
-     </item>
-     <item row="11" column="0">
-      <widget class="QCheckBox" name="day3_7_8">
-       <property name="text">
-        <string>13~14</string>
-       </property>
-      </widget>
-     </item>
-     <item row="11" column="1">
-      <widget class="QCheckBox" name="day3_8_8">
-       <property name="text">
-        <string>13~14</string>
-       </property>
-      </widget>
-     </item>
-     <item row="12" column="0">
-      <widget class="QCheckBox" name="day3_7_9">
-       <property name="text">
-        <string>14~15</string>
-       </property>
-      </widget>
-     </item>
-     <item row="12" column="1">
-      <widget class="QCheckBox" name="day3_8_9">
-       <property name="text">
-        <string>14~15</string>
-       </property>
-      </widget>
-     </item>
-     <item row="13" column="0">
-      <widget class="QCheckBox" name="day3_7_10">
-       <property name="text">
-        <string>15~16</string>
-       </property>
-      </widget>
-     </item>
-     <item row="13" column="1">
-      <widget class="QCheckBox" name="day3_8_10">
-       <property name="text">
-        <string>15~16</string>
-       </property>
-      </widget>
-     </item>
-     <item row="14" column="0">
-      <widget class="QCheckBox" name="day3_7_11">
-       <property name="text">
-        <string>16~17</string>
-       </property>
-      </widget>
-     </item>
-     <item row="14" column="1">
-      <widget class="QCheckBox" name="day3_8_11">
-       <property name="text">
-        <string>16~17</string>
-       </property>
-      </widget>
-     </item>
-     <item row="15" column="0">
-      <widget class="QCheckBox" name="day3_7_12">
-       <property name="text">
-        <string>17~18</string>
-       </property>
-      </widget>
-     </item>
-     <item row="15" column="1">
-      <widget class="QCheckBox" name="day3_8_12">
-       <property name="text">
-        <string>17~18</string>
-       </property>
-      </widget>
-     </item>
-     <item row="16" column="0">
+     <item row="18" column="0">
       <widget class="QCheckBox" name="day3_7_13">
        <property name="text">
         <string>18~19</string>
        </property>
       </widget>
      </item>
-     <item row="16" column="1">
-      <widget class="QCheckBox" name="day3_8_13">
+     <item row="17" column="1">
+      <widget class="QCheckBox" name="day3_8_12">
        <property name="text">
-        <string>18~19</string>
+        <string>17~18</string>
        </property>
       </widget>
      </item>
      <item row="17" column="0">
-      <widget class="QCheckBox" name="day3_7_14">
+      <widget class="QCheckBox" name="day3_7_12">
        <property name="text">
-        <string>19~20</string>
+        <string>17~18</string>
        </property>
       </widget>
      </item>
-     <item row="17" column="1">
+     <item row="16" column="1">
+      <widget class="QCheckBox" name="day3_8_11">
+       <property name="text">
+        <string>16~17</string>
+       </property>
+      </widget>
+     </item>
+     <item row="19" column="1">
       <widget class="QCheckBox" name="day3_8_14">
        <property name="text">
         <string>19~20</string>
        </property>
       </widget>
      </item>
-     <item row="18" column="0">
-      <widget class="QCheckBox" name="day3_7_15">
-       <property name="text">
-        <string>20~21</string>
-       </property>
-      </widget>
-     </item>
      <item row="18" column="1">
-      <widget class="QCheckBox" name="day3_8_15">
+      <widget class="QCheckBox" name="day3_8_13">
        <property name="text">
-        <string>20~21</string>
+        <string>18~19</string>
        </property>
       </widget>
      </item>
      <item row="19" column="0">
-      <widget class="QCheckBox" name="day3_7_16">
+      <widget class="QCheckBox" name="day3_7_14">
        <property name="text">
-        <string>21~22</string>
+        <string>19~20</string>
        </property>
       </widget>
      </item>
-     <item row="19" column="1">
-      <widget class="QCheckBox" name="day3_8_16">
-       <property name="text">
-        <string>21~22</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="0" colspan="2">
-      <widget class="QDateEdit" name="date3InputBox"/>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QGroupBox" name="GroupBox_day4">
-    <property name="geometry">
-     <rect>
-      <x>420</x>
-      <y>20</y>
-      <width>151</width>
-      <height>421</height>
-     </rect>
-    </property>
-    <layout class="QGridLayout" name="gridLayout_5">
-     <item row="3" column="1">
-      <widget class="QLabel" name="label_9">
+     <item row="5" column="1">
+      <widget class="QLabel" name="label_7">
        <property name="text">
         <string>8코트</string>
        </property>
       </widget>
      </item>
-     <item row="5" column="0">
-      <widget class="QCheckBox" name="day4_7_2">
+     <item row="7" column="0">
+      <widget class="QCheckBox" name="day3_7_2">
        <property name="text">
         <string>07~08</string>
        </property>
       </widget>
      </item>
-     <item row="4" column="1">
-      <widget class="QCheckBox" name="day4_8_1">
-       <property name="text">
-        <string>06~07</string>
-       </property>
-      </widget>
-     </item>
-     <item row="4" column="0">
-      <widget class="QCheckBox" name="day4_7_1">
+     <item row="6" column="1">
+      <widget class="QCheckBox" name="day3_8_1">
        <property name="text">
         <string>06~07</string>
        </property>
       </widget>
      </item>
      <item row="6" column="0">
-      <widget class="QCheckBox" name="day4_7_3">
+      <widget class="QCheckBox" name="day3_7_1">
+       <property name="text">
+        <string>06~07</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="0">
+      <widget class="QCheckBox" name="day3_7_3">
        <property name="text">
         <string>08~09</string>
        </property>
       </widget>
      </item>
-     <item row="5" column="1">
-      <widget class="QCheckBox" name="day4_8_2">
+     <item row="7" column="1">
+      <widget class="QCheckBox" name="day3_8_2">
        <property name="text">
         <string>07~08</string>
        </property>
       </widget>
      </item>
-     <item row="3" column="0">
-      <widget class="QLabel" name="label_10">
+     <item row="5" column="0">
+      <widget class="QLabel" name="label_8">
        <property name="text">
         <string>7코트</string>
        </property>
       </widget>
      </item>
-     <item row="6" column="1">
-      <widget class="QCheckBox" name="day4_8_3">
+     <item row="8" column="1">
+      <widget class="QCheckBox" name="day3_8_3">
        <property name="text">
         <string>08~09</string>
        </property>
       </widget>
      </item>
-     <item row="7" column="0">
-      <widget class="QCheckBox" name="day4_7_4">
-       <property name="text">
-        <string>09~10</string>
-       </property>
-      </widget>
-     </item>
-     <item row="7" column="1">
-      <widget class="QCheckBox" name="day4_8_4">
-       <property name="text">
-        <string>09~10</string>
-       </property>
-      </widget>
-     </item>
-     <item row="8" column="0">
-      <widget class="QCheckBox" name="day4_7_5">
-       <property name="text">
-        <string>10~11</string>
-       </property>
-      </widget>
-     </item>
-     <item row="8" column="1">
-      <widget class="QCheckBox" name="day4_8_5">
-       <property name="text">
-        <string>10~11</string>
-       </property>
-      </widget>
-     </item>
      <item row="9" column="0">
-      <widget class="QCheckBox" name="day4_7_6">
+      <widget class="QCheckBox" name="day3_7_4">
        <property name="text">
-        <string>11~12</string>
+        <string>09~10</string>
        </property>
       </widget>
      </item>
      <item row="9" column="1">
-      <widget class="QCheckBox" name="day4_8_6">
+      <widget class="QCheckBox" name="day3_8_4">
+       <property name="text">
+        <string>09~10</string>
+       </property>
+      </widget>
+     </item>
+     <item row="10" column="0">
+      <widget class="QCheckBox" name="day3_7_5">
+       <property name="text">
+        <string>10~11</string>
+       </property>
+      </widget>
+     </item>
+     <item row="10" column="1">
+      <widget class="QCheckBox" name="day3_8_5">
+       <property name="text">
+        <string>10~11</string>
+       </property>
+      </widget>
+     </item>
+     <item row="11" column="0">
+      <widget class="QCheckBox" name="day3_7_6">
        <property name="text">
         <string>11~12</string>
        </property>
       </widget>
      </item>
-     <item row="10" column="0">
-      <widget class="QCheckBox" name="day4_7_7">
-       <property name="text">
-        <string>12~13</string>
-       </property>
-      </widget>
-     </item>
-     <item row="10" column="1">
-      <widget class="QCheckBox" name="day4_8_7">
-       <property name="text">
-        <string>12~13</string>
-       </property>
-      </widget>
-     </item>
-     <item row="11" column="0">
-      <widget class="QCheckBox" name="day4_7_8">
-       <property name="text">
-        <string>13~14</string>
-       </property>
-      </widget>
-     </item>
      <item row="11" column="1">
-      <widget class="QCheckBox" name="day4_8_8">
+      <widget class="QCheckBox" name="day3_8_6">
        <property name="text">
-        <string>13~14</string>
+        <string>11~12</string>
        </property>
       </widget>
      </item>
      <item row="12" column="0">
-      <widget class="QCheckBox" name="day4_7_9">
+      <widget class="QCheckBox" name="day3_7_7">
        <property name="text">
-        <string>14~15</string>
+        <string>12~13</string>
        </property>
       </widget>
      </item>
      <item row="12" column="1">
-      <widget class="QCheckBox" name="day4_8_9">
+      <widget class="QCheckBox" name="day3_8_7">
+       <property name="text">
+        <string>12~13</string>
+       </property>
+      </widget>
+     </item>
+     <item row="13" column="0">
+      <widget class="QCheckBox" name="day3_7_8">
+       <property name="text">
+        <string>13~14</string>
+       </property>
+      </widget>
+     </item>
+     <item row="13" column="1">
+      <widget class="QCheckBox" name="day3_8_8">
+       <property name="text">
+        <string>13~14</string>
+       </property>
+      </widget>
+     </item>
+     <item row="14" column="0">
+      <widget class="QCheckBox" name="day3_7_9">
        <property name="text">
         <string>14~15</string>
        </property>
       </widget>
      </item>
-     <item row="13" column="0">
-      <widget class="QCheckBox" name="day4_7_10">
-       <property name="text">
-        <string>15~16</string>
-       </property>
-      </widget>
-     </item>
-     <item row="13" column="1">
-      <widget class="QCheckBox" name="day4_8_10">
-       <property name="text">
-        <string>15~16</string>
-       </property>
-      </widget>
-     </item>
-     <item row="14" column="0">
-      <widget class="QCheckBox" name="day4_7_11">
-       <property name="text">
-        <string>16~17</string>
-       </property>
-      </widget>
-     </item>
      <item row="14" column="1">
-      <widget class="QCheckBox" name="day4_8_11">
+      <widget class="QCheckBox" name="day3_8_9">
        <property name="text">
-        <string>16~17</string>
+        <string>14~15</string>
        </property>
       </widget>
      </item>
      <item row="15" column="0">
-      <widget class="QCheckBox" name="day4_7_12">
+      <widget class="QCheckBox" name="day3_7_10">
        <property name="text">
-        <string>17~18</string>
+        <string>15~16</string>
        </property>
       </widget>
      </item>
      <item row="15" column="1">
-      <widget class="QCheckBox" name="day4_8_12">
+      <widget class="QCheckBox" name="day3_8_10">
+       <property name="text">
+        <string>15~16</string>
+       </property>
+      </widget>
+     </item>
+     <item row="16" column="0">
+      <widget class="QCheckBox" name="day3_7_11">
+       <property name="text">
+        <string>16~17</string>
+       </property>
+      </widget>
+     </item>
+     <item row="20" column="1">
+      <widget class="QCheckBox" name="day3_8_15">
+       <property name="text">
+        <string>20~21</string>
+       </property>
+      </widget>
+     </item>
+     <item row="21" column="1">
+      <widget class="QCheckBox" name="day3_8_16">
+       <property name="text">
+        <string>21~22</string>
+       </property>
+      </widget>
+     </item>
+     <item row="21" column="0">
+      <widget class="QCheckBox" name="day3_7_16">
+       <property name="text">
+        <string>21~22</string>
+       </property>
+      </widget>
+     </item>
+     <item row="20" column="0">
+      <widget class="QCheckBox" name="day3_7_15">
+       <property name="text">
+        <string>20~21</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="2">
+      <widget class="QCheckBox" name="day3_9_1">
+       <property name="text">
+        <string>06~07</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="2">
+      <widget class="QCheckBox" name="day3_9_2">
+       <property name="text">
+        <string>07~08</string>
+       </property>
+      </widget>
+     </item>
+     <item row="11" column="2">
+      <widget class="QCheckBox" name="day3_9_6">
+       <property name="text">
+        <string>11~12</string>
+       </property>
+      </widget>
+     </item>
+     <item row="19" column="2">
+      <widget class="QCheckBox" name="day3_9_14">
+       <property name="text">
+        <string>19~20</string>
+       </property>
+      </widget>
+     </item>
+     <item row="16" column="2">
+      <widget class="QCheckBox" name="day3_9_11">
+       <property name="text">
+        <string>16~17</string>
+       </property>
+      </widget>
+     </item>
+     <item row="13" column="2">
+      <widget class="QCheckBox" name="day3_9_8">
+       <property name="text">
+        <string>13~14</string>
+       </property>
+      </widget>
+     </item>
+     <item row="21" column="2">
+      <widget class="QCheckBox" name="day3_9_16">
+       <property name="text">
+        <string>21~22</string>
+       </property>
+      </widget>
+     </item>
+     <item row="14" column="2">
+      <widget class="QCheckBox" name="day3_9_9">
+       <property name="text">
+        <string>14~15</string>
+       </property>
+      </widget>
+     </item>
+     <item row="10" column="2">
+      <widget class="QCheckBox" name="day3_9_5">
+       <property name="text">
+        <string>10~11</string>
+       </property>
+      </widget>
+     </item>
+     <item row="15" column="2">
+      <widget class="QCheckBox" name="day3_9_10">
+       <property name="text">
+        <string>15~16</string>
+       </property>
+      </widget>
+     </item>
+     <item row="17" column="2">
+      <widget class="QCheckBox" name="day3_9_12">
        <property name="text">
         <string>17~18</string>
        </property>
       </widget>
      </item>
-     <item row="16" column="0">
-      <widget class="QCheckBox" name="day4_7_13">
+     <item row="12" column="2">
+      <widget class="QCheckBox" name="day3_9_7">
        <property name="text">
-        <string>18~19</string>
+        <string>12~13</string>
        </property>
       </widget>
      </item>
-     <item row="16" column="1">
-      <widget class="QCheckBox" name="day4_8_13">
+     <item row="9" column="2">
+      <widget class="QCheckBox" name="day3_9_4">
        <property name="text">
-        <string>18~19</string>
+        <string>09~10</string>
        </property>
       </widget>
      </item>
-     <item row="17" column="0">
-      <widget class="QCheckBox" name="day4_7_14">
+     <item row="8" column="2">
+      <widget class="QCheckBox" name="day3_9_3">
        <property name="text">
-        <string>19~20</string>
+        <string>08~09</string>
        </property>
       </widget>
      </item>
-     <item row="17" column="1">
-      <widget class="QCheckBox" name="day4_8_14">
-       <property name="text">
-        <string>19~20</string>
-       </property>
-      </widget>
-     </item>
-     <item row="18" column="0">
-      <widget class="QCheckBox" name="day4_7_15">
+     <item row="20" column="2">
+      <widget class="QCheckBox" name="day3_9_15">
        <property name="text">
         <string>20~21</string>
        </property>
       </widget>
      </item>
-     <item row="18" column="1">
-      <widget class="QCheckBox" name="day4_8_15">
+     <item row="18" column="2">
+      <widget class="QCheckBox" name="day3_9_13">
        <property name="text">
-        <string>20~21</string>
+        <string>18~19</string>
        </property>
       </widget>
      </item>
-     <item row="19" column="0">
-      <widget class="QCheckBox" name="day4_7_16">
+     <item row="4" column="0" colspan="3">
+      <widget class="QDateEdit" name="date3InputBox"/>
+     </item>
+     <item row="5" column="2">
+      <widget class="QLabel" name="label_10">
        <property name="text">
-        <string>21~22</string>
+        <string>9코트</string>
        </property>
       </widget>
-     </item>
-     <item row="19" column="1">
-      <widget class="QCheckBox" name="day4_8_16">
-       <property name="text">
-        <string>21~22</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="0" colspan="2">
-      <widget class="QDateEdit" name="date4InputBox"/>
      </item>
     </layout>
    </widget>
@@ -892,8 +878,8 @@ p, li { white-space: pre-wrap; }
      <rect>
       <x>0</x>
       <y>20</y>
-      <width>141</width>
-      <height>421</height>
+      <width>201</width>
+      <height>431</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout_6">
@@ -903,9 +889,6 @@ p, li { white-space: pre-wrap; }
         <string>10~11</string>
        </property>
       </widget>
-     </item>
-     <item row="2" column="0" colspan="2">
-      <widget class="QDateEdit" name="date1InputBox"/>
      </item>
      <item row="3" column="1">
       <widget class="QLabel" name="label_11">
@@ -1138,6 +1121,128 @@ p, li { white-space: pre-wrap; }
        </property>
       </widget>
      </item>
+     <item row="15" column="2">
+      <widget class="QCheckBox" name="day1_9_12">
+       <property name="text">
+        <string>17~18</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="2">
+      <widget class="QLabel" name="label_13">
+       <property name="text">
+        <string>9코트</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="2">
+      <widget class="QCheckBox" name="day1_9_3">
+       <property name="text">
+        <string>08~09</string>
+       </property>
+      </widget>
+     </item>
+     <item row="12" column="2">
+      <widget class="QCheckBox" name="day1_9_9">
+       <property name="text">
+        <string>14~15</string>
+       </property>
+      </widget>
+     </item>
+     <item row="17" column="2">
+      <widget class="QCheckBox" name="day1_9_14">
+       <property name="text">
+        <string>19~20</string>
+       </property>
+      </widget>
+     </item>
+     <item row="19" column="2">
+      <widget class="QCheckBox" name="day1_9_16">
+       <property name="text">
+        <string>21~22</string>
+       </property>
+      </widget>
+     </item>
+     <item row="10" column="2">
+      <widget class="QCheckBox" name="day1_9_7">
+       <property name="text">
+        <string>12~13</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="2">
+      <widget class="QCheckBox" name="day1_9_1">
+       <property name="text">
+        <string>06~07</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="2">
+      <widget class="QCheckBox" name="day1_9_4">
+       <property name="text">
+        <string>09~10</string>
+       </property>
+      </widget>
+     </item>
+     <item row="13" column="2">
+      <widget class="QCheckBox" name="day1_9_10">
+       <property name="text">
+        <string>15~16</string>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="2">
+      <widget class="QCheckBox" name="day1_9_6">
+       <property name="text">
+        <string>11~12</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="2">
+      <widget class="QCheckBox" name="day1_9_5">
+       <property name="text">
+        <string>10~11</string>
+       </property>
+      </widget>
+     </item>
+     <item row="16" column="2">
+      <widget class="QCheckBox" name="day1_9_13">
+       <property name="text">
+        <string>18~19</string>
+       </property>
+      </widget>
+     </item>
+     <item row="14" column="2">
+      <widget class="QCheckBox" name="day1_9_11">
+       <property name="text">
+        <string>16~17</string>
+       </property>
+      </widget>
+     </item>
+     <item row="11" column="2">
+      <widget class="QCheckBox" name="day1_9_8">
+       <property name="text">
+        <string>13~14</string>
+       </property>
+      </widget>
+     </item>
+     <item row="18" column="2">
+      <widget class="QCheckBox" name="day1_9_15">
+       <property name="text">
+        <string>20~21</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="2">
+      <widget class="QCheckBox" name="day1_9_2">
+       <property name="text">
+        <string>07~08</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0" colspan="3">
+      <widget class="QDateEdit" name="date1InputBox"/>
+     </item>
     </layout>
    </widget>
   </widget>
@@ -1147,7 +1252,7 @@ p, li { white-space: pre-wrap; }
      <x>240</x>
      <y>10</y>
      <width>171</width>
-     <height>81</height>
+     <height>91</height>
     </rect>
    </property>
    <property name="html">
@@ -1157,7 +1262,8 @@ p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'.AppleSystemUIFont'; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;마들 테니스장은 1인 1일 최대 4시간까지 예약 가능합니다. &lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;7, 8번 코트만 구현했습니다.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;나머지 코트 : 고정대관 + 레슨&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;나머지 코트 : 고정대관 + 레슨&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;v1.2.0 : 9번 코트 구현&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QTextBrowser" name="textBrowser_2">
@@ -1166,7 +1272,7 @@ p, li { white-space: pre-wrap; }
      <x>420</x>
      <y>10</y>
      <width>161</width>
-     <height>81</height>
+     <height>91</height>
     </rect>
    </property>
    <property name="html">
@@ -1194,7 +1300,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;**사용법**&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;id, password, 대관날짜, 시간대 설정해주시고 [로그인] 버튼 클릭&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;로그인은 최소한 시작 10초전에는 미리 해주세요.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;14:00:01 초에 [예약 시작] 버튼 클릭&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;10:00:01 초에 [예약 시작] 버튼 클릭&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; text-decoration: underline; color:#fc0107;&quot;&gt;!!절대로 프로그램과 같이 실행된 브라우저를 건들면 안됩니다!!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
@@ -1262,7 +1368,7 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'.AppleSystemUIFont'; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;다음달 예약 오픈 시간 : &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;전월 19일 14:00&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;전월 19일 10:00&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
  </widget>
