@@ -35,6 +35,7 @@ class MyApp(QMainWindow, uic.loadUiType('madeul.ui')[0]):
             except:
                 pass
 
+
     def click_xPath(self, xpath):
         error = False
         while error == False:
@@ -43,6 +44,7 @@ class MyApp(QMainWindow, uic.loadUiType('madeul.ui')[0]):
                 error = True
             except:
                 pass
+
 
     def close_alert(self):
         error=False
@@ -60,8 +62,8 @@ class MyApp(QMainWindow, uic.loadUiType('madeul.ui')[0]):
         QTimer.singleShot(x, loop.quit) 
         loop.exec()
         
-
-    def test(self):
+    
+    def test(self): # 개발할 때 테스트용 함수
         selectedTimes = []
         for i in range(7, 9):
             for j in range(1, 17):
@@ -76,9 +78,8 @@ class MyApp(QMainWindow, uic.loadUiType('madeul.ui')[0]):
         self.sendKeys('//*[@id="memberPassword"]', self.userPw)
         self.click_xPath('//*[@id="frm"]/fieldset/div/div[4]/button')
         
-        self.sleep(2)
-        print(len(self.driver.window_handles))
-        if len(self.driver.window_handles) != 1:   # 팝업창 발생 시 
+        self.sleep(2)   # 팝업 창 발생하는지 대기
+        if len(self.driver.window_handles) != 1:   # 팝업창 발생 시 팝업 끄고 메인 윈도우로 이동
             self.driver.switch_to.window(self.driver.window_handles[1])
             self.driver.close()
             self.driver.switch_to.window(self.driver.window_handles[0])
@@ -181,7 +182,7 @@ class MyApp(QMainWindow, uic.loadUiType('madeul.ui')[0]):
         except:
             captchaValue = False
         
-        
+
         if captchaValue:  # 시간대 체크에 성공 했을 경우
             self.sendKeys('//*[@id="value"]', self.driver.execute_script('return _value'))
             self.click_xPath('//*[@id="capt_check"]')
@@ -192,6 +193,7 @@ class MyApp(QMainWindow, uic.loadUiType('madeul.ui')[0]):
                 self.click_xPath('//*[@id="frm"]/div/button[1]') # 최종 예약신청 버튼
                 self.close_alert()
         ''' Date 2 예약 종료'''
+    
     
     def reservationDate3(self):
         ''' Date 3 예약 '''
