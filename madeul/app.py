@@ -2,7 +2,7 @@
 
 import sys
 import pathlib
-from PyQt6.QtWidgets import QMainWindow, QApplication, QInputDialog, QMessageBox
+from PyQt6.QtWidgets import QMainWindow, QApplication, QInputDialog, QMessageBox, QLineEdit
 from PyQt6.QtCore import QDate, QEventLoop, QTimer
 from PyQt6 import uic
 from selenium import webdriver
@@ -19,6 +19,7 @@ class MyApp(QMainWindow, uic.loadUiType('madeul.ui')[0]):
         self.driver.set_window_size(1200, 800)
         self.driver.get('https://reservation.nowonsc.kr/member/login')
         self.setupUi(self)
+        self.userPwInputBox.setEchoMode(QLineEdit.EchoMode.Password)
         self.date1InputBox.setDate(QDate.currentDate())
         self.date2InputBox.setDate(QDate.currentDate())
         self.date3InputBox.setDate(QDate.currentDate())
@@ -259,10 +260,10 @@ class MyApp(QMainWindow, uic.loadUiType('madeul.ui')[0]):
     
     
     def validationCheck(self):
-        key, ok = QInputDialog.getText(self, '사용 허가 키 확인', 'Enter your key: ')
+        key, ok = QInputDialog.getText(self, '사용 허가 키 확인', 'Enter your key: ', QLineEdit.EchoMode.Password)
         
         if not ok: # 취소 버튼을 눌렀을 경우
-            return False
+            sys.exit()
         
         else:   # 확인버튼을 눌렀을 경우 
             if key == self.validationKey:    # 키가 일치할 경우
