@@ -1,7 +1,5 @@
-# version 1.2.0
-
 import sys
-import pathlib
+import os
 from PyQt6.QtWidgets import QMainWindow, QApplication, QInputDialog, QMessageBox, QLineEdit
 from PyQt6.QtCore import QDate, QEventLoop, QTimer
 from PyQt6 import uic
@@ -10,12 +8,14 @@ from selenium.webdriver.common.by import By
 import requests
 from bs4 import BeautifulSoup
 
-class MyApp(QMainWindow, uic.loadUiType('madeul.ui')[0]):
+basedir = os.path.dirname(__file__)
+
+class MyApp(QMainWindow, uic.loadUiType(os.path.join(basedir, 'madeul.ui'))[0]):
     
     def __init__(self):
         super().__init__()
         self.validationKey = self.getValidationKey()
-        self.driver = webdriver.Chrome(f'{pathlib.Path(__file__).parent.parent.resolve()}/chromedriver')
+        self.driver = webdriver.Chrome(os.path.join(basedir, 'chromedriver'))
         self.driver.set_window_size(1200, 800)
         self.driver.get('https://reservation.nowonsc.kr/member/login')
         self.setupUi(self)
