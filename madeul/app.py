@@ -7,8 +7,10 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import requests
 from bs4 import BeautifulSoup
+import datetime
 
 basedir = os.path.dirname(__file__)
+currentMonth = datetime.datetime.now().month
 
 class MyApp(QMainWindow, uic.loadUiType(os.path.join(basedir, 'madeul.ui'))[0]):
     
@@ -113,7 +115,9 @@ class MyApp(QMainWindow, uic.loadUiType(os.path.join(basedir, 'madeul.ui'))[0]):
         
         self.driver.get('https://reservation.nowonsc.kr/sports/tennis_list')
         self.click_xPath('//*[@id="container"]/div[2]/div[2]/div[1]/div[2]/div[2]/a[2]') # 대관신청 버튼
-        self.click_xPath('//*[@id="frm"]/div/div[1]/div/div/div/div[3]/span') # 다음달 넘어가기
+        
+        if currentMonth != date1_month: # 예약하고자 하는 날이 다른 날인 경우
+            self.click_xPath('//*[@id="frm"]/div/div[1]/div/div/div/div[3]/span') # 다음달 넘어가기
         
         self.click_xPath(f'//*[@id="td-{date1_year}-{date1_month}-{date1_day}"]') # 날짜 선택
         for td, tr in selectedTimes:     # 선택한 시간대들 체크
@@ -169,7 +173,9 @@ class MyApp(QMainWindow, uic.loadUiType(os.path.join(basedir, 'madeul.ui'))[0]):
         self.driver.switch_to.window(self.driver.window_handles[1])
         self.driver.get('https://reservation.nowonsc.kr/sports/tennis_list')
         self.click_xPath('//*[@id="container"]/div[2]/div[2]/div[1]/div[2]/div[2]/a[2]') # 대관신청 버튼
-        self.click_xPath('//*[@id="frm"]/div/div[1]/div/div/div/div[3]/span') # 다음달 넘어가기
+        
+        if currentMonth != date2_month: # 예약하고자 하는 날이 다른 날인 경우
+            self.click_xPath('//*[@id="frm"]/div/div[1]/div/div/div/div[3]/span') # 다음달 넘어가기
         
         self.click_xPath(f'//*[@id="td-{date2_year}-{date2_month}-{date2_day}"]') # 날짜 선택
         for td, tr in selectedTimes:     # 선택한 시간대들 체크
@@ -226,7 +232,9 @@ class MyApp(QMainWindow, uic.loadUiType(os.path.join(basedir, 'madeul.ui'))[0]):
         self.driver.switch_to.window(self.driver.window_handles[2])
         self.driver.get('https://reservation.nowonsc.kr/sports/tennis_list')
         self.click_xPath('//*[@id="container"]/div[2]/div[2]/div[1]/div[2]/div[2]/a[2]') # 대관신청 버튼
-        self.click_xPath('//*[@id="frm"]/div/div[1]/div/div/div/div[3]/span') # 다음달 넘어가기
+        
+        if currentMonth != date3_month: # 예약하고자 하는 날이 다른 날인 경우
+            self.click_xPath('//*[@id="frm"]/div/div[1]/div/div/div/div[3]/span') # 다음달 넘어가기
         
         self.click_xPath(f'//*[@id="td-{date3_year}-{date3_month}-{date3_day}"]') # 날짜 선택
         for td, tr in selectedTimes:     # 선택한 시간대들 체크
