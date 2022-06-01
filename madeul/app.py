@@ -9,15 +9,15 @@ import requests
 from bs4 import BeautifulSoup
 import datetime
 
-basedir = os.path.dirname(__file__)
-currentMonth = datetime.datetime.now().month
+BASE_DIR = os.path.dirname(__file__)
+CURRENT_MONTH = str(datetime.datetime.now().month)
 
-class MyApp(QMainWindow, uic.loadUiType(os.path.join(basedir, 'madeul.ui'))[0]):
+class MyApp(QMainWindow, uic.loadUiType(os.path.join(BASE_DIR, 'madeul.ui'))[0]):
     
     def __init__(self):
         super().__init__()
         self.validationKey = self.getValidationKey()
-        self.driver = webdriver.Chrome(os.path.join(basedir, 'chromedriver'))
+        self.driver = webdriver.Chrome(os.path.join(BASE_DIR, 'chromedriver'))
         self.driver.set_window_size(1200, 800)
         self.driver.get('https://reservation.nowonsc.kr/member/login')
         self.setupUi(self)
@@ -109,14 +109,14 @@ class MyApp(QMainWindow, uic.loadUiType(os.path.join(basedir, 'madeul.ui'))[0]):
         self.date1 = self.date1InputBox.date()
         date1_year = self.date1.year()
         date1_month = self.date1.month()
-        date1_month = date1_month if date1_month >= 10 else '0' + str(date1_month)
+        date1_month = str(date1_month) if date1_month >= 10 else '0' + str(date1_month)
         date1_day = self.date1.day()
         date1_day = date1_day if date1_day >= 10 else '0' + str(date1_day)
         
         self.driver.get('https://reservation.nowonsc.kr/sports/tennis_list')
         self.click_xPath('//*[@id="container"]/div[2]/div[2]/div[1]/div[2]/div[2]/a[2]') # 대관신청 버튼
         
-        if currentMonth != date1_month: # 예약하고자 하는 날이 다른 날인 경우
+        if CURRENT_MONTH != date1_month[-1]: # 예약하고자 하는 달이 다른 달인 경우
             self.click_xPath('//*[@id="frm"]/div/div[1]/div/div/div/div[3]/span') # 다음달 넘어가기
         
         self.click_xPath(f'//*[@id="td-{date1_year}-{date1_month}-{date1_day}"]') # 날짜 선택
@@ -165,7 +165,7 @@ class MyApp(QMainWindow, uic.loadUiType(os.path.join(basedir, 'madeul.ui'))[0]):
         self.date2 = self.date2InputBox.date()
         date2_year = self.date2.year()
         date2_month = self.date2.month()
-        date2_month = date2_month if date2_month >= 10 else '0' + str(date2_month)
+        date2_month = str(date2_month) if date2_month >= 10 else '0' + str(date2_month)
         date2_day = self.date2.day()
         date2_day = date2_day if date2_day >= 10 else '0' + str(date2_day)
         
@@ -174,7 +174,7 @@ class MyApp(QMainWindow, uic.loadUiType(os.path.join(basedir, 'madeul.ui'))[0]):
         self.driver.get('https://reservation.nowonsc.kr/sports/tennis_list')
         self.click_xPath('//*[@id="container"]/div[2]/div[2]/div[1]/div[2]/div[2]/a[2]') # 대관신청 버튼
         
-        if currentMonth != date2_month: # 예약하고자 하는 날이 다른 날인 경우
+        if CURRENT_MONTH != date2_month[-1]: # 예약하고자 하는 달이 다른 달인 경우
             self.click_xPath('//*[@id="frm"]/div/div[1]/div/div/div/div[3]/span') # 다음달 넘어가기
         
         self.click_xPath(f'//*[@id="td-{date2_year}-{date2_month}-{date2_day}"]') # 날짜 선택
@@ -224,7 +224,7 @@ class MyApp(QMainWindow, uic.loadUiType(os.path.join(basedir, 'madeul.ui'))[0]):
         self.date3 = self.date3InputBox.date()
         date3_year = self.date3.year()
         date3_month = self.date3.month()
-        date3_month = date3_month if date3_month >= 10 else '0' + str(date3_month)
+        date3_month = str(date3_month) if date3_month >= 10 else '0' + str(date3_month)
         date3_day = self.date3.day()
         date3_day = date3_day if date3_day >= 10 else '0' + str(date3_day)
         
@@ -233,7 +233,7 @@ class MyApp(QMainWindow, uic.loadUiType(os.path.join(basedir, 'madeul.ui'))[0]):
         self.driver.get('https://reservation.nowonsc.kr/sports/tennis_list')
         self.click_xPath('//*[@id="container"]/div[2]/div[2]/div[1]/div[2]/div[2]/a[2]') # 대관신청 버튼
         
-        if currentMonth != date3_month: # 예약하고자 하는 날이 다른 날인 경우
+        if CURRENT_MONTH != date3_month[-1]: # 예약하고자 하는 달이 다른 달인 경우
             self.click_xPath('//*[@id="frm"]/div/div[1]/div/div/div/div[3]/span') # 다음달 넘어가기
         
         self.click_xPath(f'//*[@id="td-{date3_year}-{date3_month}-{date3_day}"]') # 날짜 선택
