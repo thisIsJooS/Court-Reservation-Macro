@@ -4,3 +4,4 @@ test.py
 chromedriver
 build
 dist
+*.spec
