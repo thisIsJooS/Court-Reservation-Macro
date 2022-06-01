@@ -11,11 +11,11 @@ import datetime
 
 BASE_DIR = os.path.dirname(__file__)
 CURRENT_MONTH = str(datetime.datetime.now().month)
-
 class MyApp(QMainWindow, uic.loadUiType(os.path.join(BASE_DIR, 'madeul.ui'))[0]):
     
     def __init__(self):
         super().__init__()
+        self.IS_LOGGED_IN = False
         self.validationKey = self.getValidationKey()
         self.driver = webdriver.Chrome(os.path.join(BASE_DIR, 'chromedriver'))
         self.driver.set_window_size(1200, 800)
@@ -75,17 +75,20 @@ class MyApp(QMainWindow, uic.loadUiType(os.path.join(BASE_DIR, 'madeul.ui'))[0])
         
     
     def login(self):
-        self.userId = self.userIdInputBox.text()
-        self.userPw = self.userPwInputBox.text()
-        self.sendKeys('//*[@id="memberId"]', self.userId)
-        self.sendKeys('//*[@id="memberPassword"]', self.userPw)
-        self.click_xPath('//*[@id="frm"]/fieldset/div/div[4]/button')
-        
-        self.sleep(2)   # 팝업 창 발생하는지 대기
-        if len(self.driver.window_handles) != 1:   # 팝업창 발생 시 팝업 끄고 메인 윈도우로 이동
-            self.driver.switch_to.window(self.driver.window_handles[1])
-            self.driver.close()
-            self.driver.switch_to.window(self.driver.window_handles[0])
+        if not self.IS_LOGGED_IN:
+            self.userId = self.userIdInputBox.text()
+            self.userPw = self.userPwInputBox.text()
+            self.sendKeys('//*[@id="memberId"]', self.userId)
+            self.sendKeys('//*[@id="memberPassword"]', self.userPw)
+            self.click_xPath('//*[@id="frm"]/fieldset/div/div[4]/button')
+            
+            self.IS_LOGGED_IN = True
+            
+            self.sleep(2)   # 팝업 창 발생하는지 대기
+            if len(self.driver.window_handles) != 1:   # 팝업창 발생 시 팝업 끄고 메인 윈도우로 이동
+                self.driver.switch_to.window(self.driver.window_handles[1])
+                self.driver.close()
+                self.driver.switch_to.window(self.driver.window_handles[0])
     
     
     def reservationDate1(self):
