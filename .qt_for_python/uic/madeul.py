@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file '/Users/joos/Documents/2022/code/Tennicro/madeul/dist/madeul.ui'
+# Form implementation generated from reading ui file '/Users/joos/Documents/2022/code/Tennicro/madeul/madeul.ui'
 #
 # Created by: PyQt6 UI code generator 6.3.0
 #
@@ -573,7 +573,7 @@ class Ui_Dialog(object):
         self.loginBtn.setText(_translate("Dialog", "로그인"))
         self.startBtn.setText(_translate("Dialog", "예약 시작"))
         self.plainTextEdit.setPlainText(_translate("Dialog", "마들 테니스장 예약 매크로\n"
-"v1.3.0"))
+"v1.4.0"))
         self.groupBox.setTitle(_translate("Dialog", "날짜 및 시간 선택"))
         self.label_5.setText(_translate("Dialog", "8코트"))
         self.day2_7_2.setText(_translate("Dialog", "07~08"))
