@@ -114,7 +114,7 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="plainText">
     <string>마들 테니스장 예약 매크로
-v1.4.0</string>
+v1.4.1</string>
    </property>
   </widget>
   <widget class="QGroupBox" name="groupBox">
