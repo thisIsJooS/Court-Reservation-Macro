@@ -5,3 +5,4 @@ chromedriver
 build
 dist
 *.spec
+settings.py
