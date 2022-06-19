@@ -83,7 +83,7 @@ click_xPath('/html/body/div[2]/div[2]/div/div/div/div/ul/li[1]/form/ul/li[2]/inp
 # 팝업창 발생 시 닫기
 popups = len(driver.window_handles) - 1 
 if popups:
-    for i in range(popups):
+    for _ in range(popups):
         driver.switch_to.window(driver.window_handles[1])
         driver.close()
     driver.switch_to.window(driver.window_handles[0])

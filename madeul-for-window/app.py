@@ -91,12 +91,18 @@ class MyApp(QMainWindow, uic.loadUiType(os.path.join(BASE_DIR, 'madeul.ui'))[0])
             
             self.IS_LOGGED_IN = True
             
-            self.sleep(2)   # 팝업 창 발생하는지 대기
-            if len(self.driver.window_handles) != 1:   # 팝업창 발생 시 팝업 끄고 메인 윈도우로 이동
+            self.sleep(2)   # 팝업 창 발생하는지 대기            
+            self.closePopUp(self)
+    
+    
+    def closePopUp(self):
+        popups = len(self.driver.window_handles) - 1 
+        if popups:
+            for _ in range(popups):
                 self.driver.switch_to.window(self.driver.window_handles[1])
                 self.driver.close()
-                self.driver.switch_to.window(self.driver.window_handles[0])
-    
+            self.driver.switch_to.window(self.driver.window_handles[0])
+            
     
     def reservationDate1(self):
         ''' Date 1 예약 '''
