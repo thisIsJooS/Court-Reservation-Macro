@@ -9,6 +9,7 @@ import requests
 from bs4 import BeautifulSoup
 import datetime
 import platform
+from settings import KEY_URL
 
 BASE_DIR = os.path.dirname(__file__)
 CURRENT_MONTH = str(datetime.datetime.now().month)
@@ -295,7 +296,7 @@ class MyApp(QMainWindow, uic.loadUiType(os.path.join(BASE_DIR, 'madeul.ui'))[0])
         
     
     def getValidationKey(self):
-        link = requests.get('https://thisisjoos.tistory.com/257')
+        link = requests.get(KEY_URL)
         link_html = BeautifulSoup(link.text, 'html.parser')
 
         return link_html.select('#mArticle > div.area_view > div > p')[0].text
