@@ -58,8 +58,21 @@ class MyApp(QMainWindow, uic.loadUiType(os.path.join(BASE_DIR, 'gwanak.ui'))[0])
                 error = True
             except:
                 pass
-
-
+    
+    
+    def click_xPath_if_enable(self, xpath):
+        error = False
+        while error == False:
+            try:
+                if self.driver.find_element(by=By.XPATH, value='//*[@id="contents"]/div/div/div/div[3]/div[2]/div/table/tbody/tr/td'):
+                    if self.driver.find_element(by=By.XPATH, value='//*[@id="contents"]/div/div/div/div[3]/div[2]/div/table/tbody/tr/td').text.strip() == '예약 가능한 대관일을 선택하세요.':
+                        self.driver.refresh()
+                self.driver.find_element(by=By.XPATH, value=xpath).click()
+                error = True
+            except:
+                pass
+    
+    
     def close_alert(self):
         error=False
         while error==False:
@@ -141,8 +154,10 @@ class MyApp(QMainWindow, uic.loadUiType(os.path.join(BASE_DIR, 'gwanak.ui'))[0])
         # 예약 사이트 이동 - 날짜, 코트번호 자동선택됨
         self.driver.get(f'https://www.gwanakgongdan.or.kr/fmcs/116?facilities_type=C&base_date={date}&center=KWAN_AK03&type=1002&part=02&place={courtNum}')
         
+        
+        
         for i in selectedTimes:
-            self.click_xPath(f'//*[@id="contents"]/div/div/div/div[3]/div[2]/div/table/tbody/tr[{i}]/td[2]')
+            self.click_xPath_if_enable(f'//*[@id="contents"]/div/div/div/div[3]/div[2]/div/table/tbody/tr[{i}]/td[2]')
         
         self.sendKeys('//*[@id="contents"]/div/div/div/div[4]/button', Keys.ENTER)
         self.findElement('//*[@id="team_nm"]')
@@ -184,7 +199,7 @@ class MyApp(QMainWindow, uic.loadUiType(os.path.join(BASE_DIR, 'gwanak.ui'))[0])
         self.driver.get(f'https://www.gwanakgongdan.or.kr/fmcs/116?facilities_type=C&base_date={date}&center=KWAN_AK03&type=1002&part=02&place={courtNum}')
         
         for i in selectedTimes:
-            self.click_xPath(f'//*[@id="contents"]/div/div/div/div[3]/div[2]/div/table/tbody/tr[{i}]/td[2]')
+            self.click_xPath_if_enable(f'//*[@id="contents"]/div/div/div/div[3]/div[2]/div/table/tbody/tr[{i}]/td[2]')
         
         
         self.sendKeys('//*[@id="contents"]/div/div/div/div[4]/button', Keys.ENTER)

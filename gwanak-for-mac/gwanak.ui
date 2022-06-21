@@ -1,426 +1,459 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
-  <class>MainWindow</class>
-  <widget class="QMainWindow" name="MainWindow">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>748</width>
+    <height>562</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="formWidget" native="true">
     <property name="geometry">
-      <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>748</width>
-        <height>562</height>
-      </rect>
+     <rect>
+      <x>10</x>
+      <y>50</y>
+      <width>201</width>
+      <height>88</height>
+     </rect>
     </property>
-    <property name="windowTitle">
-      <string>MainWindow</string>
+    <layout class="QFormLayout" name="formLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="iDLabel">
+       <property name="text">
+        <string>ID</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="userIdInputBox"/>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="passwordLabel">
+       <property name="text">
+        <string>Password</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="userPwInputBox"/>
+     </item>
+     <item row="2" column="0" colspan="2">
+      <widget class="QPushButton" name="loginBtn">
+       <property name="text">
+        <string>로그인</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QTextBrowser" name="textBrowser">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>201</width>
+      <height>41</height>
+     </rect>
     </property>
-    <widget class="QWidget" name="centralwidget">
-      <widget class="QWidget" name="formWidget" native="true">
-        <property name="geometry">
-          <rect>
-            <x>10</x>
-            <y>50</y>
-            <width>201</width>
-            <height>88</height>
-          </rect>
-        </property>
-        <layout class="QFormLayout" name="formLayout">
-          <item row="0" column="0">
-            <widget class="QLabel" name="iDLabel">
-              <property name="text">
-                <string>ID</string>
-              </property>
-            </widget>
-          </item>
-          <item row="0" column="1">
-            <widget class="QLineEdit" name="userIdInputBox"/>
-          </item>
-          <item row="1" column="0">
-            <widget class="QLabel" name="passwordLabel">
-              <property name="text">
-                <string>Password</string>
-              </property>
-            </widget>
-          </item>
-          <item row="1" column="1">
-            <widget class="QLineEdit" name="userPwInputBox"/>
-          </item>
-          <item row="2" column="0" colspan="2">
-            <widget class="QPushButton" name="loginBtn">
-              <property name="text">
-                <string>로그인</string>
-              </property>
-            </widget>
-          </item>
-        </layout>
+    <property name="html">
+     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'.AppleSystemUIFont'; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;관악구민운동장 예약 매크로&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;v1.2.0&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="testModeBtn">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>20</y>
+      <width>87</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>테스트모드</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="textBrowser_4">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>40</y>
+      <width>191</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="html">
+     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'.AppleSystemUIFont'; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt; &lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;테스트모드에 체크하고 실행할 시 최종예약 직전까지만 가고 멈춥니다.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="GroupBox_day1">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>10</y>
+      <width>151</width>
+      <height>481</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_6">
+     <item row="12" column="0">
+      <widget class="QCheckBox" name="time7_day1">
+       <property name="text">
+        <string>12~13</string>
+       </property>
       </widget>
-      <widget class="QTextBrowser" name="textBrowser">
-        <property name="geometry">
-          <rect>
-            <x>10</x>
-            <y>0</y>
-            <width>201</width>
-            <height>41</height>
-          </rect>
-        </property>
-        <property name="html">
-          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt; &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt; p, li { white-space: pre-wrap; } &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'.AppleSystemUIFont'; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;관악구민운동장 예약 매크로&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;v1.1.0&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-        </property>
+     </item>
+     <item row="1" column="0" rowspan="2" colspan="2">
+      <widget class="QDateEdit" name="dateInputBox_1"/>
+     </item>
+     <item row="9" column="0">
+      <widget class="QCheckBox" name="time4_day1">
+       <property name="text">
+        <string>09~10</string>
+       </property>
       </widget>
-      <widget class="QCheckBox" name="testModeBtn">
-        <property name="geometry">
-          <rect>
-            <x>640</x>
-            <y>20</y>
-            <width>87</width>
-            <height>20</height>
-          </rect>
-        </property>
-        <property name="text">
-          <string>테스트모드</string>
-        </property>
+     </item>
+     <item row="14" column="0">
+      <widget class="QCheckBox" name="time9_day1">
+       <property name="text">
+        <string>14~15</string>
+       </property>
       </widget>
-      <widget class="QTextBrowser" name="textBrowser_4">
-        <property name="geometry">
-          <rect>
-            <x>550</x>
-            <y>40</y>
-            <width>191</width>
-            <height>91</height>
-          </rect>
-        </property>
-        <property name="html">
-          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt; &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt; p, li { white-space: pre-wrap; } &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'.AppleSystemUIFont'; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;테스트모드에 체크하고 실행할 시 최종예약 직전까지만 가고 멈춥니다.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-        </property>
+     </item>
+     <item row="17" column="0">
+      <widget class="QCheckBox" name="time12_day1">
+       <property name="text">
+        <string>17~18</string>
+       </property>
       </widget>
-      <widget class="QGroupBox" name="GroupBox_day1">
-        <property name="geometry">
-          <rect>
-            <x>230</x>
-            <y>10</y>
-            <width>151</width>
-            <height>481</height>
-          </rect>
-        </property>
-        <layout class="QGridLayout" name="gridLayout_6">
-          <item row="12" column="0">
-            <widget class="QCheckBox" name="time7_day1">
-              <property name="text">
-                <string>12~13</string>
-              </property>
-            </widget>
-          </item>
-          <item row="1" column="0" rowspan="2" colspan="2">
-            <widget class="QDateEdit" name="dateInputBox_1"/>
-          </item>
-          <item row="9" column="0">
-            <widget class="QCheckBox" name="time4_day1">
-              <property name="text">
-                <string>09~10</string>
-              </property>
-            </widget>
-          </item>
-          <item row="14" column="0">
-            <widget class="QCheckBox" name="time9_day1">
-              <property name="text">
-                <string>14~15</string>
-              </property>
-            </widget>
-          </item>
-          <item row="17" column="0">
-            <widget class="QCheckBox" name="time12_day1">
-              <property name="text">
-                <string>17~18</string>
-              </property>
-            </widget>
-          </item>
-          <item row="16" column="0">
-            <widget class="QCheckBox" name="time11_day1">
-              <property name="text">
-                <string>16~17</string>
-              </property>
-            </widget>
-          </item>
-          <item row="15" column="0">
-            <widget class="QCheckBox" name="time10_day1">
-              <property name="text">
-                <string>15~16</string>
-              </property>
-            </widget>
-          </item>
-          <item row="13" column="0">
-            <widget class="QCheckBox" name="time8_day1">
-              <property name="text">
-                <string>13~14</string>
-              </property>
-            </widget>
-          </item>
-          <item row="11" column="0">
-            <widget class="QCheckBox" name="time6_day1">
-              <property name="text">
-                <string>11~12</string>
-              </property>
-            </widget>
-          </item>
-          <item row="8" column="0">
-            <widget class="QCheckBox" name="time3_day1">
-              <property name="text">
-                <string>08~09</string>
-              </property>
-            </widget>
-          </item>
-          <item row="6" column="0">
-            <widget class="QCheckBox" name="time1_day1">
-              <property name="text">
-                <string>06~07</string>
-              </property>
-            </widget>
-          </item>
-          <item row="7" column="0">
-            <widget class="QCheckBox" name="time2_day1">
-              <property name="text">
-                <string>07~08</string>
-              </property>
-            </widget>
-          </item>
-          <item row="18" column="0">
-            <widget class="QCheckBox" name="time13_day1">
-              <property name="text">
-                <string>18~19</string>
-              </property>
-            </widget>
-          </item>
-          <item row="19" column="0">
-            <widget class="QCheckBox" name="time14_day1">
-              <property name="text">
-                <string>19~20</string>
-              </property>
-            </widget>
-          </item>
-          <item row="20" column="0">
-            <widget class="QCheckBox" name="time15_day1">
-              <property name="text">
-                <string>20~21</string>
-              </property>
-            </widget>
-          </item>
-          <item row="21" column="0">
-            <widget class="QCheckBox" name="time16_day1">
-              <property name="text">
-                <string>21~22</string>
-              </property>
-            </widget>
-          </item>
-          <item row="3" column="0">
-            <widget class="QLabel" name="label">
-              <property name="text">
-                <string>코트번호</string>
-              </property>
-            </widget>
-          </item>
-          <item row="3" column="1">
-            <widget class="QSpinBox" name="courtNumSpinBox_1"/>
-          </item>
-          <item row="10" column="0">
-            <widget class="QCheckBox" name="time5_day1">
-              <property name="text">
-                <string>10~11</string>
-              </property>
-            </widget>
-          </item>
-        </layout>
+     </item>
+     <item row="16" column="0">
+      <widget class="QCheckBox" name="time11_day1">
+       <property name="text">
+        <string>16~17</string>
+       </property>
       </widget>
-      <widget class="QPushButton" name="startBtn">
-        <property name="geometry">
-          <rect>
-            <x>280</x>
-            <y>500</y>
-            <width>221</width>
-            <height>41</height>
-          </rect>
-        </property>
-        <property name="text">
-          <string>예약 시작</string>
-        </property>
+     </item>
+     <item row="15" column="0">
+      <widget class="QCheckBox" name="time10_day1">
+       <property name="text">
+        <string>15~16</string>
+       </property>
       </widget>
-      <widget class="QTextBrowser" name="textBrowser">
-        <property name="geometry">
-          <rect>
-            <x>10</x>
-            <y>150</y>
-            <width>201</width>
-            <height>121</height>
-          </rect>
-        </property>
-        <property name="html">
-          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt; &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt; p, li { white-space: pre-wrap; } &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'.AppleSystemUIFont'; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;관악구시설관리공단의 회원 정보를 입력해주세요.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;아이디와 비밀번호는 꼭!!&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;정확히 입력해주세요!!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-        </property>
+     </item>
+     <item row="13" column="0">
+      <widget class="QCheckBox" name="time8_day1">
+       <property name="text">
+        <string>13~14</string>
+       </property>
       </widget>
-      <widget class="QTextBrowser" name="textBrowser_3">
-        <property name="geometry">
-          <rect>
-            <x>10</x>
-            <y>290</y>
-            <width>201</width>
-            <height>241</height>
-          </rect>
-        </property>
-        <property name="html">
-          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt; &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt; p, li { white-space: pre-wrap; } &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'.AppleSystemUIFont'; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;**사용법**&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;id, password 입력 후 [로그인] 버튼 클릭.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;로그인은 최소한 시작 10초전에는 미리 해주세요.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;10:00:01 초에 [예약 시작] 버튼 클릭.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;브라우저 주시 후 '대관신청' 버튼 클릭.&lt;/span&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt; &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-        </property>
+     </item>
+     <item row="11" column="0">
+      <widget class="QCheckBox" name="time6_day1">
+       <property name="text">
+        <string>11~12</string>
+       </property>
       </widget>
-      <widget class="QTextBrowser" name="textBrowser">
-        <property name="geometry">
-          <rect>
-            <x>550</x>
-            <y>230</y>
-            <width>181</width>
-            <height>261</height>
-          </rect>
-        </property>
-        <property name="html">
-          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt; &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt; p, li { white-space: pre-wrap; } &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'.AppleSystemUIFont'; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt; &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; text-decoration: underline; color:#fc0107;&quot;&gt;!!대관신청 버튼을 클릭하는 것 이외에 절대로 프로그램과 같이 실행된 브라우저를 건들면 안됩니다!!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-        </property>
+     </item>
+     <item row="8" column="0">
+      <widget class="QCheckBox" name="time3_day1">
+       <property name="text">
+        <string>08~09</string>
+       </property>
       </widget>
-      <widget class="QGroupBox" name="GroupBox_day1_2">
-        <property name="geometry">
-          <rect>
-            <x>390</x>
-            <y>10</y>
-            <width>151</width>
-            <height>481</height>
-          </rect>
-        </property>
-        <layout class="QGridLayout" name="gridLayout_7">
-          <item row="12" column="0">
-            <widget class="QCheckBox" name="time7_day2">
-              <property name="text">
-                <string>12~13</string>
-              </property>
-            </widget>
-          </item>
-          <item row="1" column="0" rowspan="2" colspan="2">
-            <widget class="QDateEdit" name="dateInputBox_2"/>
-          </item>
-          <item row="9" column="0">
-            <widget class="QCheckBox" name="time4_day2">
-              <property name="text">
-                <string>09~10</string>
-              </property>
-            </widget>
-          </item>
-          <item row="14" column="0">
-            <widget class="QCheckBox" name="time9_day2">
-              <property name="text">
-                <string>14~15</string>
-              </property>
-            </widget>
-          </item>
-          <item row="17" column="0">
-            <widget class="QCheckBox" name="time12_day2">
-              <property name="text">
-                <string>17~18</string>
-              </property>
-            </widget>
-          </item>
-          <item row="16" column="0">
-            <widget class="QCheckBox" name="time11_day2">
-              <property name="text">
-                <string>16~17</string>
-              </property>
-            </widget>
-          </item>
-          <item row="15" column="0">
-            <widget class="QCheckBox" name="time10_day2">
-              <property name="text">
-                <string>15~16</string>
-              </property>
-            </widget>
-          </item>
-          <item row="13" column="0">
-            <widget class="QCheckBox" name="time8_day2">
-              <property name="text">
-                <string>13~14</string>
-              </property>
-            </widget>
-          </item>
-          <item row="11" column="0">
-            <widget class="QCheckBox" name="time6_day2">
-              <property name="text">
-                <string>11~12</string>
-              </property>
-            </widget>
-          </item>
-          <item row="10" column="0">
-            <widget class="QCheckBox" name="time5_day2">
-              <property name="text">
-                <string>10~11</string>
-              </property>
-            </widget>
-          </item>
-          <item row="8" column="0">
-            <widget class="QCheckBox" name="time3_day2">
-              <property name="text">
-                <string>08~09</string>
-              </property>
-            </widget>
-          </item>
-          <item row="6" column="0">
-            <widget class="QCheckBox" name="time1_day2">
-              <property name="text">
-                <string>06~07</string>
-              </property>
-            </widget>
-          </item>
-          <item row="7" column="0">
-            <widget class="QCheckBox" name="time2_day2">
-              <property name="text">
-                <string>07~08</string>
-              </property>
-            </widget>
-          </item>
-          <item row="18" column="0">
-            <widget class="QCheckBox" name="time13_day2">
-              <property name="text">
-                <string>18~19</string>
-              </property>
-            </widget>
-          </item>
-          <item row="19" column="0">
-            <widget class="QCheckBox" name="time14_day2">
-              <property name="text">
-                <string>19~20</string>
-              </property>
-            </widget>
-          </item>
-          <item row="20" column="0">
-            <widget class="QCheckBox" name="time15_day2">
-              <property name="text">
-                <string>20~21</string>
-              </property>
-            </widget>
-          </item>
-          <item row="21" column="0">
-            <widget class="QCheckBox" name="time16_day2">
-              <property name="text">
-                <string>21~22</string>
-              </property>
-            </widget>
-          </item>
-          <item row="3" column="0">
-            <widget class="QLabel" name="label_2">
-              <property name="text">
-                <string>코트번호</string>
-              </property>
-            </widget>
-          </item>
-          <item row="3" column="1">
-            <widget class="QSpinBox" name="courtNumSpinBox_2"/>
-          </item>
-        </layout>
+     </item>
+     <item row="6" column="0">
+      <widget class="QCheckBox" name="time1_day1">
+       <property name="text">
+        <string>06~07</string>
+       </property>
       </widget>
-    </widget>
-    <widget class="QStatusBar" name="statusbar"/>
+     </item>
+     <item row="7" column="0">
+      <widget class="QCheckBox" name="time2_day1">
+       <property name="text">
+        <string>07~08</string>
+       </property>
+      </widget>
+     </item>
+     <item row="18" column="0">
+      <widget class="QCheckBox" name="time13_day1">
+       <property name="text">
+        <string>18~19</string>
+       </property>
+      </widget>
+     </item>
+     <item row="19" column="0">
+      <widget class="QCheckBox" name="time14_day1">
+       <property name="text">
+        <string>19~20</string>
+       </property>
+      </widget>
+     </item>
+     <item row="20" column="0">
+      <widget class="QCheckBox" name="time15_day1">
+       <property name="text">
+        <string>20~21</string>
+       </property>
+      </widget>
+     </item>
+     <item row="21" column="0">
+      <widget class="QCheckBox" name="time16_day1">
+       <property name="text">
+        <string>21~22</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>코트번호</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QSpinBox" name="courtNumSpinBox_1"/>
+     </item>
+     <item row="10" column="0">
+      <widget class="QCheckBox" name="time5_day1">
+       <property name="text">
+        <string>10~11</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="startBtn">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>500</y>
+      <width>221</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>예약 시작</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="textBrowser">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>150</y>
+      <width>201</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="html">
+     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'.AppleSystemUIFont'; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt; &lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;관악구시설관리공단의 회원 정보를 입력해주세요.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;아이디와 비밀번호는 꼭!!&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;정확히 입력해주세요!!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="textBrowser_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>290</y>
+      <width>201</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <property name="html">
+     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'.AppleSystemUIFont'; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt; &lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;**사용법**&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;id, password 입력 후 [로그인] 버튼 클릭.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;로그인은 최소한 시작 10초전에는 미리 해주세요.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;10:00:01 초에 [예약 시작] 버튼 클릭.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;브라우저 주시 후 '대관신청' 버튼 클릭.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="textBrowser">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>230</y>
+      <width>181</width>
+      <height>261</height>
+     </rect>
+    </property>
+    <property name="html">
+     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'.AppleSystemUIFont'; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt; &lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; text-decoration: underline; color:#fc0107;&quot;&gt;!!대관신청 버튼을 클릭하는 것 이외에 절대로 프로그램과 같이 실행된 브라우저를 건들면 안됩니다!!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="GroupBox_day1_2">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>10</y>
+      <width>151</width>
+      <height>481</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_7">
+     <item row="12" column="0">
+      <widget class="QCheckBox" name="time7_day2">
+       <property name="text">
+        <string>12~13</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0" rowspan="2" colspan="2">
+      <widget class="QDateEdit" name="dateInputBox_2"/>
+     </item>
+     <item row="9" column="0">
+      <widget class="QCheckBox" name="time4_day2">
+       <property name="text">
+        <string>09~10</string>
+       </property>
+      </widget>
+     </item>
+     <item row="14" column="0">
+      <widget class="QCheckBox" name="time9_day2">
+       <property name="text">
+        <string>14~15</string>
+       </property>
+      </widget>
+     </item>
+     <item row="17" column="0">
+      <widget class="QCheckBox" name="time12_day2">
+       <property name="text">
+        <string>17~18</string>
+       </property>
+      </widget>
+     </item>
+     <item row="16" column="0">
+      <widget class="QCheckBox" name="time11_day2">
+       <property name="text">
+        <string>16~17</string>
+       </property>
+      </widget>
+     </item>
+     <item row="15" column="0">
+      <widget class="QCheckBox" name="time10_day2">
+       <property name="text">
+        <string>15~16</string>
+       </property>
+      </widget>
+     </item>
+     <item row="13" column="0">
+      <widget class="QCheckBox" name="time8_day2">
+       <property name="text">
+        <string>13~14</string>
+       </property>
+      </widget>
+     </item>
+     <item row="11" column="0">
+      <widget class="QCheckBox" name="time6_day2">
+       <property name="text">
+        <string>11~12</string>
+       </property>
+      </widget>
+     </item>
+     <item row="10" column="0">
+      <widget class="QCheckBox" name="time5_day2">
+       <property name="text">
+        <string>10~11</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="0">
+      <widget class="QCheckBox" name="time3_day2">
+       <property name="text">
+        <string>08~09</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0">
+      <widget class="QCheckBox" name="time1_day2">
+       <property name="text">
+        <string>06~07</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="0">
+      <widget class="QCheckBox" name="time2_day2">
+       <property name="text">
+        <string>07~08</string>
+       </property>
+      </widget>
+     </item>
+     <item row="18" column="0">
+      <widget class="QCheckBox" name="time13_day2">
+       <property name="text">
+        <string>18~19</string>
+       </property>
+      </widget>
+     </item>
+     <item row="19" column="0">
+      <widget class="QCheckBox" name="time14_day2">
+       <property name="text">
+        <string>19~20</string>
+       </property>
+      </widget>
+     </item>
+     <item row="20" column="0">
+      <widget class="QCheckBox" name="time15_day2">
+       <property name="text">
+        <string>20~21</string>
+       </property>
+      </widget>
+     </item>
+     <item row="21" column="0">
+      <widget class="QCheckBox" name="time16_day2">
+       <property name="text">
+        <string>21~22</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>코트번호</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QSpinBox" name="courtNumSpinBox_2"/>
+     </item>
+    </layout>
+   </widget>
   </widget>
-  <resources/>
-  <connections/>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
 </ui>
