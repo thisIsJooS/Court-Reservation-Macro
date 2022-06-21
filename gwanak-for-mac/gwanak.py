@@ -10,6 +10,7 @@ from bs4 import BeautifulSoup
 import datetime
 import platform
 from settings import KEY_URL
+from selenium.webdriver.common.keys import Keys
 
 BASE_DIR = os.path.dirname(__file__)
 CURRENT_MONTH = str(datetime.datetime.now().month)
@@ -104,7 +105,7 @@ class MyApp(QMainWindow, uic.loadUiType(os.path.join(BASE_DIR, 'gwanak.ui'))[0])
             self.IS_LOGGED_IN = True
             
             self.sleep(2)   # 팝업 창 발생하는지 대기            
-            self.closePopUp(self)
+            self.closePopUp()
     
     
     def closePopUp(self):
@@ -143,7 +144,7 @@ class MyApp(QMainWindow, uic.loadUiType(os.path.join(BASE_DIR, 'gwanak.ui'))[0])
         for i in selectedTimes:
             self.click_xPath(f'//*[@id="contents"]/div/div/div/div[3]/div[2]/div/table/tbody/tr[{i}]/td[2]')
         
-        
+        self.sendKeys('//*[@id="contents"]/div/div/div/div[4]/button', Keys.ENTER)
         self.findElement('//*[@id="team_nm"]')
         self.sendKeys('//*[@id="team_nm"]', self.driver.find_element(by=By.XPATH, value='//*[@id="mem_nm"]').get_attribute('value'))
         self.sendKeys('//*[@id="users"]', '4')
@@ -186,6 +187,7 @@ class MyApp(QMainWindow, uic.loadUiType(os.path.join(BASE_DIR, 'gwanak.ui'))[0])
             self.click_xPath(f'//*[@id="contents"]/div/div/div/div[3]/div[2]/div/table/tbody/tr[{i}]/td[2]')
         
         
+        self.sendKeys('//*[@id="contents"]/div/div/div/div[4]/button', Keys.ENTER)
         self.findElement('//*[@id="team_nm"]')
         self.sendKeys('//*[@id="team_nm"]', self.driver.find_element(by=By.XPATH, value='//*[@id="mem_nm"]').get_attribute('value'))
         self.sendKeys('//*[@id="users"]', '4')
