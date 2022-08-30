@@ -68,7 +68,7 @@
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'.AppleSystemUIFont'; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;관악구민운동장 예약 매크로&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;v1.2.0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;v1.3.0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
    <widget class="QCheckBox" name="testModeBtn">
@@ -112,7 +112,7 @@ p, li { white-space: pre-wrap; }
     </property>
     <layout class="QGridLayout" name="gridLayout_6">
      <item row="12" column="0">
-      <widget class="QCheckBox" name="time7_day1">
+      <widget class="QCheckBox" name="time6_day1">
        <property name="text">
         <string>12~13</string>
        </property>
@@ -122,98 +122,98 @@ p, li { white-space: pre-wrap; }
       <widget class="QDateEdit" name="dateInputBox_1"/>
      </item>
      <item row="9" column="0">
-      <widget class="QCheckBox" name="time4_day1">
+      <widget class="QCheckBox" name="time3_day1">
        <property name="text">
         <string>09~10</string>
        </property>
       </widget>
      </item>
      <item row="14" column="0">
-      <widget class="QCheckBox" name="time9_day1">
+      <widget class="QCheckBox" name="time8_day1">
        <property name="text">
         <string>14~15</string>
        </property>
       </widget>
      </item>
      <item row="17" column="0">
-      <widget class="QCheckBox" name="time12_day1">
+      <widget class="QCheckBox" name="time11_day1">
        <property name="text">
         <string>17~18</string>
        </property>
       </widget>
      </item>
      <item row="16" column="0">
-      <widget class="QCheckBox" name="time11_day1">
+      <widget class="QCheckBox" name="time10_day1">
        <property name="text">
         <string>16~17</string>
        </property>
       </widget>
      </item>
      <item row="15" column="0">
-      <widget class="QCheckBox" name="time10_day1">
+      <widget class="QCheckBox" name="time9_day1">
        <property name="text">
         <string>15~16</string>
        </property>
       </widget>
      </item>
      <item row="13" column="0">
-      <widget class="QCheckBox" name="time8_day1">
+      <widget class="QCheckBox" name="time7_day1">
        <property name="text">
         <string>13~14</string>
        </property>
       </widget>
      </item>
      <item row="11" column="0">
-      <widget class="QCheckBox" name="time6_day1">
+      <widget class="QCheckBox" name="time5_day1">
        <property name="text">
         <string>11~12</string>
        </property>
       </widget>
      </item>
      <item row="8" column="0">
-      <widget class="QCheckBox" name="time3_day1">
+      <widget class="QCheckBox" name="time2_day1">
        <property name="text">
         <string>08~09</string>
        </property>
       </widget>
      </item>
      <item row="6" column="0">
-      <widget class="QCheckBox" name="time1_day1">
+      <widget class="QCheckBox" name="time0_day1">
        <property name="text">
         <string>06~07</string>
        </property>
       </widget>
      </item>
      <item row="7" column="0">
-      <widget class="QCheckBox" name="time2_day1">
+      <widget class="QCheckBox" name="time1_day1">
        <property name="text">
         <string>07~08</string>
        </property>
       </widget>
      </item>
      <item row="18" column="0">
-      <widget class="QCheckBox" name="time13_day1">
+      <widget class="QCheckBox" name="time12_day1">
        <property name="text">
         <string>18~19</string>
        </property>
       </widget>
      </item>
      <item row="19" column="0">
-      <widget class="QCheckBox" name="time14_day1">
+      <widget class="QCheckBox" name="time13_day1">
        <property name="text">
         <string>19~20</string>
        </property>
       </widget>
      </item>
      <item row="20" column="0">
-      <widget class="QCheckBox" name="time15_day1">
+      <widget class="QCheckBox" name="time14_day1">
        <property name="text">
         <string>20~21</string>
        </property>
       </widget>
      </item>
      <item row="21" column="0">
-      <widget class="QCheckBox" name="time16_day1">
+      <widget class="QCheckBox" name="time15_day1">
        <property name="text">
         <string>21~22</string>
        </property>
@@ -230,7 +230,7 @@ p, li { white-space: pre-wrap; }
       <widget class="QSpinBox" name="courtNumSpinBox_1"/>
      </item>
      <item row="10" column="0">
-      <widget class="QCheckBox" name="time5_day1">
+      <widget class="QCheckBox" name="time4_day1">
        <property name="text">
         <string>10~11</string>
        </property>
@@ -321,7 +321,7 @@ p, li { white-space: pre-wrap; }
     </property>
     <layout class="QGridLayout" name="gridLayout_7">
      <item row="12" column="0">
-      <widget class="QCheckBox" name="time7_day2">
+      <widget class="QCheckBox" name="time6_day2">
        <property name="text">
         <string>12~13</string>
        </property>
@@ -331,105 +331,105 @@ p, li { white-space: pre-wrap; }
       <widget class="QDateEdit" name="dateInputBox_2"/>
      </item>
      <item row="9" column="0">
-      <widget class="QCheckBox" name="time4_day2">
+      <widget class="QCheckBox" name="time3_day2">
        <property name="text">
         <string>09~10</string>
        </property>
       </widget>
      </item>
      <item row="14" column="0">
-      <widget class="QCheckBox" name="time9_day2">
+      <widget class="QCheckBox" name="time8_day2">
        <property name="text">
         <string>14~15</string>
        </property>
       </widget>
      </item>
      <item row="17" column="0">
-      <widget class="QCheckBox" name="time12_day2">
+      <widget class="QCheckBox" name="time11_day2">
        <property name="text">
         <string>17~18</string>
        </property>
       </widget>
      </item>
      <item row="16" column="0">
-      <widget class="QCheckBox" name="time11_day2">
+      <widget class="QCheckBox" name="time10_day2">
        <property name="text">
         <string>16~17</string>
        </property>
       </widget>
      </item>
      <item row="15" column="0">
-      <widget class="QCheckBox" name="time10_day2">
+      <widget class="QCheckBox" name="time9_day2">
        <property name="text">
         <string>15~16</string>
        </property>
       </widget>
      </item>
      <item row="13" column="0">
-      <widget class="QCheckBox" name="time8_day2">
+      <widget class="QCheckBox" name="time7_day2">
        <property name="text">
         <string>13~14</string>
        </property>
       </widget>
      </item>
      <item row="11" column="0">
-      <widget class="QCheckBox" name="time6_day2">
+      <widget class="QCheckBox" name="time5_day2">
        <property name="text">
         <string>11~12</string>
        </property>
       </widget>
      </item>
      <item row="10" column="0">
-      <widget class="QCheckBox" name="time5_day2">
+      <widget class="QCheckBox" name="time4_day2">
        <property name="text">
         <string>10~11</string>
        </property>
       </widget>
      </item>
      <item row="8" column="0">
-      <widget class="QCheckBox" name="time3_day2">
+      <widget class="QCheckBox" name="time2_day2">
        <property name="text">
         <string>08~09</string>
        </property>
       </widget>
      </item>
      <item row="6" column="0">
-      <widget class="QCheckBox" name="time1_day2">
+      <widget class="QCheckBox" name="time0_day2">
        <property name="text">
         <string>06~07</string>
        </property>
       </widget>
      </item>
      <item row="7" column="0">
-      <widget class="QCheckBox" name="time2_day2">
+      <widget class="QCheckBox" name="time1_day2">
        <property name="text">
         <string>07~08</string>
        </property>
       </widget>
      </item>
      <item row="18" column="0">
-      <widget class="QCheckBox" name="time13_day2">
+      <widget class="QCheckBox" name="time12_day2">
        <property name="text">
         <string>18~19</string>
        </property>
       </widget>
      </item>
      <item row="19" column="0">
-      <widget class="QCheckBox" name="time14_day2">
+      <widget class="QCheckBox" name="time13_day2">
        <property name="text">
         <string>19~20</string>
        </property>
       </widget>
      </item>
      <item row="20" column="0">
-      <widget class="QCheckBox" name="time15_day2">
+      <widget class="QCheckBox" name="time14_day2">
        <property name="text">
         <string>20~21</string>
        </property>
       </widget>
      </item>
      <item row="21" column="0">
-      <widget class="QCheckBox" name="time16_day2">
+      <widget class="QCheckBox" name="time15_day2">
        <property name="text">
         <string>21~22</string>
        </property>

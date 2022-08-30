@@ -1,3 +1,4 @@
+
 import sys
 import os
 from PyQt6.QtWidgets import QMainWindow, QApplication, QInputDialog, QMessageBox, QLineEdit
@@ -11,6 +12,7 @@ import datetime
 import platform
 from settings import KEY_URL
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support import expected_conditions as EC
 
 BASE_DIR = os.path.dirname(__file__)
 CURRENT_MONTH = str(datetime.datetime.now().month)
@@ -60,17 +62,21 @@ class MyApp(QMainWindow, uic.loadUiType(os.path.join(BASE_DIR, 'gwanak.ui'))[0])
                 pass
     
     
-    def click_xPath_if_enable(self, xpath):
+    def click_xPath_if_enable(self, xpath, date):
         error = False
+        
         while error == False:
             try:
-                if self.driver.find_element(by=By.XPATH, value='//*[@id="contents"]/div/div/div/div[3]/div[2]/div/table/tbody/tr/td'):
-                    if self.driver.find_element(by=By.XPATH, value='//*[@id="contents"]/div/div/div/div[3]/div[2]/div/table/tbody/tr/td').text.strip() == '예약 가능한 대관일을 선택하세요.':
-                        self.driver.refresh()
-                self.driver.find_element(by=By.XPATH, value=xpath).click()
+                date_box = self.driver.find_element(by=By.XPATH, value=f'//*[@id="date-{date}"]')
+                
+                if date_box.get_attribute("data-state_cd") == "20":
+                    self.driver.refresh()   # 새로고침
+                    raise Exception("이 날짜는 아직 예약이 안열림. 새로고침 시도")
+                self.driver.execute_script("arguments[0].click()", self.driver.find_element(by=By.XPATH, value=xpath))
                 error = True
             except:
                 pass
+    
     
     
     def close_alert(self):
@@ -82,6 +88,21 @@ class MyApp(QMainWindow, uic.loadUiType(os.path.join(BASE_DIR, 'gwanak.ui'))[0])
             except:
                 pass
             
+            
+    def isRsvEnableCheckBy(self, xpath):   # 대관신청버튼을 눌렀을떄 다음페이지로 넘어가졌는가 체크하는 함수
+        error = False
+        while error == False:
+            try:
+                self.driver.find_element(by=By.XPATH, value=xpath)
+                error = True
+            except: # 다음 페이지로 못넘어가서 여기 에러발생, 여기에서 alert 뜨지 않았는지 확인
+                if EC.alert_is_present():
+                    self.close_alert()
+                    return False
+                pass
+        return True
+    
+    
     def findElement(self, xpath):
         error = False
         while error == False:
@@ -97,14 +118,6 @@ class MyApp(QMainWindow, uic.loadUiType(os.path.join(BASE_DIR, 'gwanak.ui'))[0])
         x = int(x*1000) 
         QTimer.singleShot(x, loop.quit) 
         loop.exec()
-        
-    
-    def test(self): # 개발할 때 테스트용 함수
-        selectedTimes = []
-        for i in range(7, 9):
-            for j in range(1, 17):
-                if self.__dict__[f'day1_{i}_{j}'].isChecked():
-                    selectedTimes.append(f'day1_{i}_{j}')
         
     
     def login(self):
@@ -128,97 +141,62 @@ class MyApp(QMainWindow, uic.loadUiType(os.path.join(BASE_DIR, 'gwanak.ui'))[0])
                 self.driver.switch_to.window(self.driver.window_handles[1])
                 self.driver.close()
             self.driver.switch_to.window(self.driver.window_handles[0])
-            
-            
-    def reservationDate1(self):
-        ''' Date 1 예약 '''
-        selectedTimes = []    # 체크한 시간대들을 리스트에 삽입
-        
-        for i in range(1, 17):
-            if self.__dict__[f'time{i}_day1'].isChecked():
-                selectedTimes.append(i)
-
-            
-        if not selectedTimes:   # 아무 시간대도 체크하지 않았으면 리턴
-            return    
-        
-        date = self.dateInputBox_1.date()
-        year = date.year()
-        month = date.month()
-        month = str(month) if month >= 10 else '0' + str(month)
-        day = date.day()
-        day = day if day >= 10 else '0' + str(day)
-        date = f'{year}{month}{day}'
-        courtNum = 284 + self.courtNumSpinBox_1.value()
-        
-        # 예약 사이트 이동 - 날짜, 코트번호 자동선택됨
-        self.driver.get(f'https://www.gwanakgongdan.or.kr/fmcs/116?facilities_type=C&base_date={date}&center=KWAN_AK03&type=1002&part=02&place={courtNum}')
-        
-        
-        
-        for i in selectedTimes:
-            self.click_xPath_if_enable(f'//*[@id="contents"]/div/div/div/div[3]/div[2]/div/table/tbody/tr[{i}]/td[2]')
-        
-        self.sendKeys('//*[@id="contents"]/div/div/div/div[4]/button', Keys.ENTER)
-        self.findElement('//*[@id="team_nm"]')
-        self.sendKeys('//*[@id="team_nm"]', self.driver.find_element(by=By.XPATH, value='//*[@id="mem_nm"]').get_attribute('value'))
-        self.sendKeys('//*[@id="users"]', '4')
-        self.sendKeys('//*[@id="title"]', '테니스')
-        self.sendKeys('//*[@id="purpose"]', '7047')
-        self.click_xPath('//*[@id="agree_use1"]')
-
-            
-        if not self.testModeBtn.isChecked():
-            self.click_xPath('//*[@id="writeForm"]/fieldset/p[2]/button') # 최종 예약신청 버튼
-        ''' Date1 예약 종료'''
     
     
-    def reservationDate2(self):
-        ''' Date 2 예약 '''
-        selectedTimes = []    # 체크한 시간대들을 리스트에 삽입
-        
-        for i in range(1, 17):
-            if self.__dict__[f'time{i}_day2'].isChecked():
-                selectedTimes.append(i)
-
-        if not selectedTimes:   # 아무 시간대도 체크하지 않았으면 리턴
-            return   
-        
-        date = self.dateInputBox_2.date()
-        year = date.year()
-        month = date.month()
-        month = str(month) if month >= 10 else '0' + str(month)
-        day = date.day()
-        day = day if day >= 10 else '0' + str(day)
-        date = f'{year}{month}{day}'
-        courtNum = 284 + self.courtNumSpinBox_2.value()
-        
-        self.driver.execute_script("window.open('');")
-        self.driver.switch_to.window(self.driver.window_handles[1])
-        # 예약 사이트 이동 - 날짜, 코트번호 자동선택됨
-        self.driver.get(f'https://www.gwanakgongdan.or.kr/fmcs/116?facilities_type=C&base_date={date}&center=KWAN_AK03&type=1002&part=02&place={courtNum}')
-        
-        for i in selectedTimes:
-            self.click_xPath_if_enable(f'//*[@id="contents"]/div/div/div/div[3]/div[2]/div/table/tbody/tr[{i}]/td[2]')
-        
-        
-        self.sendKeys('//*[@id="contents"]/div/div/div/div[4]/button', Keys.ENTER)
-        self.findElement('//*[@id="team_nm"]')
-        self.sendKeys('//*[@id="team_nm"]', self.driver.find_element(by=By.XPATH, value='//*[@id="mem_nm"]').get_attribute('value'))
-        self.sendKeys('//*[@id="users"]', '4')
-        self.sendKeys('//*[@id="title"]', '테니스')
-        self.sendKeys('//*[@id="purpose"]', '7047')
-        self.click_xPath('//*[@id="agree_use1"]')
-
+    def reserve(self):
+        for n in [1,2]:
+            checkedAtLeastOneTime = False
             
-        if not self.testModeBtn.isChecked():
-            self.click_xPath('//*[@id="writeForm"]/fieldset/p[2]/button') # 최종 예약신청 버튼
-        ''' Date2 예약 종료'''
-    
-    def reservationStart(self):
-        self.reservationDate1()
-        self.reservationDate2()
-    
+            if n != 1: # 새 탭 열기
+                self.driver.execute_script("window.open('');")
+                self.driver.switch_to.window(self.driver.window_handles[n-1])
+            
+            selectedTimes = []    # 체크한 시간대들을 리스트에 삽입
+            
+            for i in range(0, 16):
+                if self.__dict__[f'time{i}_day{n}'].isChecked():
+                    selectedTimes.append(i)
+
+                
+            if not selectedTimes:   # 아무 시간대도 체크하지 않았으면 리턴
+                return    
+            
+            date = self.__dict__[f'dateInputBox_{n}'].date()
+            year = date.year()
+            month = date.month()
+            month = str(month) if month >= 10 else '0' + str(month)
+            day = date.day()
+            day = day if day >= 10 else '0' + str(day)
+            date = f'{year}{month}{day}'
+            courtNum = 284 + self.__dict__[f'courtNumSpinBox_{n}'].value()
+            
+            # 예약 사이트 이동 - 날짜, 코트번호 자동선택됨
+            self.driver.get(f'https://www.gwanakgongdan.or.kr/fmcs/116?facilities_type=C&base_date={date}&center=KWAN_AK03&type=1002&part=02&place={courtNum}')
+            
+            
+            for i in selectedTimes:
+                self.click_xPath_if_enable(f'//*[@id="checkbox_time_{i}"]', date)
+                if not checkedAtLeastOneTime and not self.driver.find_element(by=By.XPATH, value=f'//*[@id="checkbox_time_{i}"]').get_attribute('disabled'):
+                    checkedAtLeastOneTime = True  # 해당 시간에 예약이 가능해서 한 시간대라도 체크를 했는가?
+            
+            #하지만 이미 다 예약을 해서 아무것도 체크를 하지 못했다면? 다음으로 못넘어가서 두번째 예약도 못함.
+            #실패를 했다면? continue
+            if not checkedAtLeastOneTime:
+                continue
+            
+            self.sendKeys('//*[@id="contents"]/div/div/div/div[5]/button', Keys.ENTER)  # 대관신청 버튼
+            
+            self.findElement('//*[@id="team_nm"]')
+            self.sendKeys('//*[@id="team_nm"]', self.driver.find_element(by=By.XPATH, value='//*[@id="mem_nm"]').get_attribute('value'))
+            self.sendKeys('//*[@id="users"]', '4')
+            self.sendKeys('//*[@id="title"]', '테니스')
+            self.sendKeys('//*[@id="purpose"]', '7047')
+            self.click_xPath('//*[@id="agree_use1"]')
+
+                
+            if not self.testModeBtn.isChecked():
+                self.click_xPath('//*[@id="writeForm"]/fieldset/p[2]/button') # 최종 예약신청 버튼
+        
     
     def validationCheck(self):
         key, ok = QInputDialog.getText(self, '사용 허가 키 확인', 'Enter your key: ', QLineEdit.EchoMode.Password)
@@ -243,6 +221,11 @@ class MyApp(QMainWindow, uic.loadUiType(os.path.join(BASE_DIR, 'gwanak.ui'))[0])
         link_html = BeautifulSoup(link.text, 'html.parser')
 
         return link_html.select('#mArticle > div.area_view > div > p')[0].text
+    
+    
+    def reservationStart(self):
+        self.reserve();
+    
 
     
     ''' 메인 함수 '''
