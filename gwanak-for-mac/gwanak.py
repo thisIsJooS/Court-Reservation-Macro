@@ -18,9 +18,9 @@ BASE_DIR = os.path.dirname(__file__)
 CURRENT_MONTH = str(datetime.datetime.now().month)
 
 if platform.system() == 'Darwin':
-    DRIVER_PATH = os.path.join(BASE_DIR, 'chromedriver')
+    DRIVER_PATH = os.path.join(BASE_DIR, '../chromedriver')
 else:
-    DRIVER_PATH = os.path.join(BASE_DIR, 'chromedriver.exe')
+    DRIVER_PATH = os.path.join(BASE_DIR, '../chromedriver.exe')
     
     
 class MyApp(QMainWindow, uic.loadUiType(os.path.join(BASE_DIR, 'gwanak.ui'))[0]):
@@ -35,9 +35,7 @@ class MyApp(QMainWindow, uic.loadUiType(os.path.join(BASE_DIR, 'gwanak.ui'))[0])
         self.setupUi(self)
         self.userPwInputBox.setEchoMode(QLineEdit.EchoMode.Password)
         self.dateInputBox_1.setDate(QDate.currentDate())
-        self.dateInputBox_2.setDate(QDate.currentDate())
         self.courtNumSpinBox_1.setRange(1,4)
-        self.courtNumSpinBox_2.setRange(1,4)
         self.initUI()
         
     
@@ -144,58 +142,51 @@ class MyApp(QMainWindow, uic.loadUiType(os.path.join(BASE_DIR, 'gwanak.ui'))[0])
     
     
     def reserve(self):
-        for n in [1,2]:
-            checkedAtLeastOneTime = False
-            
-            if n != 1: # 새 탭 열기
-                self.driver.execute_script("window.open('');")
-                self.driver.switch_to.window(self.driver.window_handles[n-1])
-            
-            selectedTimes = []    # 체크한 시간대들을 리스트에 삽입
-            
-            for i in range(0, 16):
-                if self.__dict__[f'time{i}_day{n}'].isChecked():
-                    selectedTimes.append(i)
+        checkedAtLeastOneTime = False
+        
+        selectedTimes = []    # 체크한 시간대들을 리스트에 삽입
+        
+        for i in range(0, 16):
+            if self.__dict__[f'time{i}_day1'].isChecked():
+                selectedTimes.append(i)
 
-                
-            if not selectedTimes:   # 아무 시간대도 체크하지 않았으면 리턴
-                return    
             
-            date = self.__dict__[f'dateInputBox_{n}'].date()
-            year = date.year()
-            month = date.month()
-            month = str(month) if month >= 10 else '0' + str(month)
-            day = date.day()
-            day = day if day >= 10 else '0' + str(day)
-            date = f'{year}{month}{day}'
-            courtNum = 284 + self.__dict__[f'courtNumSpinBox_{n}'].value()
-            
-            # 예약 사이트 이동 - 날짜, 코트번호 자동선택됨
-            self.driver.get(f'https://www.gwanakgongdan.or.kr/fmcs/116?facilities_type=C&base_date={date}&center=KWAN_AK03&type=1002&part=02&place={courtNum}')
-            
-            
-            for i in selectedTimes:
-                self.click_xPath_if_enable(f'//*[@id="checkbox_time_{i}"]', date)
-                if not checkedAtLeastOneTime and not self.driver.find_element(by=By.XPATH, value=f'//*[@id="checkbox_time_{i}"]').get_attribute('disabled'):
-                    checkedAtLeastOneTime = True  # 해당 시간에 예약이 가능해서 한 시간대라도 체크를 했는가?
-            
-            #하지만 이미 다 예약을 해서 아무것도 체크를 하지 못했다면? 다음으로 못넘어가서 두번째 예약도 못함.
-            #실패를 했다면? continue
-            if not checkedAtLeastOneTime:
-                continue
-            
-            self.sendKeys('//*[@id="contents"]/div/div/div/div[5]/button', Keys.ENTER)  # 대관신청 버튼
-            
-            self.findElement('//*[@id="team_nm"]')
-            self.sendKeys('//*[@id="team_nm"]', self.driver.find_element(by=By.XPATH, value='//*[@id="mem_nm"]').get_attribute('value'))
-            self.sendKeys('//*[@id="users"]', '4')
-            self.sendKeys('//*[@id="title"]', '테니스')
-            self.sendKeys('//*[@id="purpose"]', '7047')
-            self.click_xPath('//*[@id="agree_use1"]')
+        if not selectedTimes:   # 아무 시간대도 체크하지 않았으면 리턴
+            return    
+        
+        date = self.__dict__[f'dateInputBox_1'].date()
+        year = date.year()
+        month = date.month()
+        month = str(month) if month >= 10 else '0' + str(month)
+        day = date.day()
+        day = day if day >= 10 else '0' + str(day)
+        date = f'{year}{month}{day}'
+        courtNum = 284 + self.__dict__[f'courtNumSpinBox_1'].value()
+        
+        # 예약 사이트 이동 - 날짜, 코트번호 자동선택됨
+        self.driver.get(f'https://www.gwanakgongdan.or.kr/fmcs/116?facilities_type=C&base_date={date}&center=KWAN_AK03&type=1002&part=02&place={courtNum}')
+        
+        
+        for i in selectedTimes:
+            self.click_xPath_if_enable(f'//*[@id="checkbox_time_{i}"]', date)
+            if not checkedAtLeastOneTime and not self.driver.find_element(by=By.XPATH, value=f'//*[@id="checkbox_time_{i}"]').get_attribute('disabled'):
+                checkedAtLeastOneTime = True  # 해당 시간에 예약이 가능해서 한 시간대라도 체크를 했는가?
+        
+        #하지만 이미 다 예약을 해서 아무것도 체크를 하지 못했다면? return
+        if not checkedAtLeastOneTime:
+            return
+        
+        self.sendKeys('//*[@id="contents"]/div/div/div/div[5]/button', Keys.ENTER)  # 대관신청 버튼
+        
+        self.findElement('//*[@id="team_nm"]')
+        self.sendKeys('//*[@id="team_nm"]', self.driver.find_element(by=By.XPATH, value='//*[@id="mem_nm"]').get_attribute('value'))
+        self.sendKeys('//*[@id="users"]', '4')
+        self.sendKeys('//*[@id="title"]', '테니스')
+        self.click_xPath('//*[@id="agree_use1"]')
 
-                
-            if not self.testModeBtn.isChecked():
-                self.click_xPath('//*[@id="writeForm"]/fieldset/p[2]/button') # 최종 예약신청 버튼
+            
+        if not self.testModeBtn.isChecked():
+            self.click_xPath('//*[@id="writeForm"]/fieldset/p[2]/button') # 최종 예약신청 버튼
         
     
     def validationCheck(self):
@@ -210,7 +201,7 @@ class MyApp(QMainWindow, uic.loadUiType(os.path.join(BASE_DIR, 'gwanak.ui'))[0])
             else:   # 키가 일치 하지 않을 경우
                 errorMsg = QMessageBox(self)
                 errorMsg.setWindowTitle('키 불일치')
-                errorMsg.setText('키가 일치하지 않습니다. 개발자에게 문의해 주세요.')
+                errorMsg.setText('키가 일치하지 않습니다. 한/영 체크해주시고, 그래도 안되면 개발자에게 문의해 주세요. (컴학19)')
                 errorMsg.setStandardButtons(QMessageBox.StandardButton.Yes)
                 errorMsg.exec()
                 return self.validationCheck()
