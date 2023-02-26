@@ -235,6 +235,9 @@ class MyApp(QMainWindow, uic.loadUiType(os.path.join(BASE_DIR, 'gwanak.ui'))[0])
             self.startBtn.clicked.connect(self.reservationStart)
         else:
             sys.exit()
+        
+        self.loginBtn.clicked.connect(self.login)
+        self.startBtn.clicked.connect(self.reservationStart)
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
