@@ -7,3 +7,4 @@ dist
 *.spec
 settings.py
 .qt_for_python
+.idea

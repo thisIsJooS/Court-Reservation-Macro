@@ -1,33 +1,29 @@
-레포지토리에 업로드 된 chromedriver 버전 : 102.0.5005.*
-관악 mac : 104.*
+# 테니스 코트 자동 예약 프로그램
 
-실행 pc의 크롬 버전에 맞는 chromedriver를 다운로드 받아주세요.
+### 🎾 개발 기간 : 2022년 5월 ~ 2023년 2월
+######  ** 예약 웹 사이트의 변경으로 2023년 2월 이후로 동작하지 않습니다.
 
-[chromedriver 다운로드](https://chromedriver.storage.googleapis.com/index.html)
+### 🎾 예약 가능 코트
+|     코트 명     |         주소          |
+|:------------:|:-------------------:|
+| 관악구민운동장 테니스장 |  서울특별시 관악구 낙성대로 40  |
+| 마들 근린공원 테니스장 | 서울특별시 노원구 상계동 770-2 |
 
-<hr>
+### 🎾 코트 별 레포지토리 이동
+- [관악구민운동장 테니스장 - macOS](https://github.com/thisIsJooS/tennis-court-auto-reservation/tree/main/gwanak-for-mac)
+- [관악구민운동장 테니스장 - Window](https://github.com/thisIsJooS/tennis-court-auto-reservation/tree/main/gwanak-for-window)
+- [마들 근린공원 테니스장 - macOS](https://github.com/thisIsJooS/tennis-court-auto-reservation/tree/main/madeul-for-mac)
+- [마들 근린공원 테니스장 - Window](https://github.com/thisIsJooS/tennis-court-auto-reservation/tree/main/madeul-for-window)
 
-### 마들코트
-v 1.2.0 업데이트 - 220524    
-- 9번 코트 예약 가능
-- 한번에 예약할 수 있는 날짜가 4일에서 3일로 감소
+### 🎾 사용 방법
+1. 프로그램을 실행하고자 하는 로컬 컴퓨터의 Chrome 브라우저 버전과 일치하는 chromedriver 다운로드 
+   - [chromedriver 다운로드](https://chromedriver.storage.googleapis.com/index.html)
+2. 프로그램 실행
+   - [PyInstaller](https://pyinstaller.org/en/stable/) 명령어를 통해 실행파일로 빌드 후 실행
+   - [PyQt6](https://pypi.org/project/PyQt6/), [Selenium](https://www.selenium.dev/) 라이브러리 수동 설치 후 py 파일 실행
 
-v 1.3.0 업데이트 - 220527    
-- 입장 키, 계정 비밀번호 입력 시 블러처리
+### 🎾 UI
+![Artboard](./assets/gwanak.png)
+![Artboard](./assets/madeul.png)
 
-v 1.4.0 업데이트 - 220601    
-- 그 동안 무조건 다음 달로 넘어가는 상황을 가정하고 제작했음.     
-- 사용자가 선택한 달을 현재 달과 비교하여 다음 달 버튼 클릭 여부 결정.
 
-v 1.4.1 업데이트 - 220601    
-- 로그인이 된 상태에서 또 다시 로그인 버튼을 눌렀을 시 프로그램이 죽는 문제 해결
-
-<hr>
-
-### 관악코트
-v 1.2.0 업데이트 - 220621
-- 예약시작을 눌렀는데 아직 미오픈일 경우 무한 새로고침
-
-v 1.3.0 업데이트 - 220830
-- 관악 홈페이지 변경에 따른 코드 수정
-- 체크를 하나도 하지 못했을 경우 대관신청 버튼을 못누르는데, 그에 따른 대응 추가
